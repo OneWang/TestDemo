@@ -16,6 +16,7 @@
 #import <objc/runtime.h>
 #import "UIImage+ClipVIew.h"
 #import "Person.h"
+#import "SortAlgorithm.h"
 
 @interface ViewController ()<UIGestureRecognizerDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -61,19 +62,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
-//    self.view.borderWidth = 1.0;
-//    NSLog(@"%f",self.view.borderWidth);
-    
-//    [self createCollection];
-//    [self setupPlayer];
+    SortAlgorithm *sort = [[SortAlgorithm alloc] init];
+}
 
-//    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width * 0.5, self.view.bounds.size.height * 0.5);
-//    UIView *view = [[UIView alloc] initWithFrame:frame];
-//    view.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:view];
-    
-//    [self textconvertRect];
+//测试两个字符串的初始化
+- (void)testStringAddress{
     NSString *str1 = @"123";
     NSString *str2 = [NSString stringWithFormat:@"%@",@"123"];
     if (str1 == str2) {
@@ -98,6 +91,7 @@
     }
 }
 
+//测试指针的变换
 - (void)testPointer{
     int arrayName[4] = {10,20,30,40};
     int *p = (int *)(&arrayName + 1);
