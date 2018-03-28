@@ -63,14 +63,46 @@
     // Do any additional setup after loading the view, typically from a nib.
     
 //    SortAlgorithm *sort = [[SortAlgorithm alloc] init];
-    [self setUpTitleEffect:^(NSString *__autoreleasing *title, CGFloat *width) {
-        *title = @"我是指针的指针";
-        *width = 12.5;
-    }];
+
+    [self testGCDSemaphore];
+}
+
+- (void)testGCDSemaphore{
+    // 创建队列组
+    dispatch_group_t group = dispatch_group_create();
+    // 创建信号量，并且设置值为10
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(10);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    for (int i = 0; i < 100; i++){
+        // 由于是异步执行的，所以每次循环Block里面的dispatch_semaphore_signal根本还没有执行就会执行dispatch_semaphore_wait，从而semaphore-1.当循环10此后，semaphore等于0，则会阻塞线程，直到执行了Block的dispatch_semaphore_signal 才会继续执行
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_group_async(group, queue, ^{
+            NSLog(@"%i===%@",i,[NSThread currentThread]);
+            sleep(2);
+            // 每次发送信号则semaphore会+1，
+            dispatch_semaphore_signal(semaphore);
+        });
+//        dispatch_async(queue, ^{
+//            NSLog(@"%i===%@",i,[NSThread currentThread]);
+//            sleep(2);
+//            // 每次发送信号则semaphore会+1，
+//            dispatch_semaphore_signal(semaphore);
+//        });
+    }
     
-    NSString *string = @"单独的指针";
-    CGFloat count = 109043.f;
-    [self setupTitleWithSting:&string andWidth:&count];
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+//    NSMutableArray *array = [NSMutableArray array];
+//    for (int i = 0; i < 10; i ++) {
+//        dispatch_async(queue, ^{
+//            NSLog(@"%d===%@",i,[NSThread currentThread]);
+//            sleep(3);
+//            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//            [array addObject:@(i)];
+//            NSLog(@"后%d===%@",i,[NSThread currentThread]);
+//            dispatch_semaphore_signal(semaphore);
+//        });
+//    }
 }
 
 //测试两个字符串的初始化
@@ -85,6 +117,17 @@
 }
 
 #pragma mark - block作为参数和返回值的使用
+- (void)testFunction{
+    [self setUpTitleEffect:^(NSString *__autoreleasing *title, CGFloat *width) {
+        *title = @"我是指针的指针";
+        *width = 12.5;
+    }];
+    
+    NSString *string = @"单独的指针";
+    CGFloat count = 109043.f;
+    [self setupTitleWithSting:&string andWidth:&count];
+}
+
 - (void)testBlock{
     void(^testblock)(int n) = [self createFunctionWithString:^NSString *(NSArray *numarray) {
         NSMutableString *string = [NSMutableString string];
