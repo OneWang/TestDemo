@@ -67,6 +67,13 @@
     [self testGCDSemaphore];
 }
 
+- (void)testNeedTableview{
+//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+//    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+//    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, width, height) style:UITableViewStyleGrouped];
+//    tableView.delegate = self;
+}
+
 - (void)testGCDSemaphore{
     // 创建队列组
     dispatch_group_t group = dispatch_group_create();
@@ -200,11 +207,6 @@
     
     CGRect rect = [red convertRect:blue.frame toView:self.view];
     NSLog(@"%@",NSStringFromCGRect(rect));
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.view setNeedsLayout];
-//    [self.view layoutIfNeeded];
 }
 
 - (void)nsurlsessonTest{

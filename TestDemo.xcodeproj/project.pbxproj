@@ -23,6 +23,8 @@
 		04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E6802018A34F000F6370 /* AssetImageManager.m */; };
 		04A4E68420196C63000F6370 /* AssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E68320196C63000F6370 /* AssetModel.m */; };
 		04A4E6872019C3B6000F6370 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E6862019C3B6000F6370 /* PreviewViewController.m */; };
+		04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6D357206CF221005A531B /* EXLNeededTabeleView.m */; };
+		04A6D35D206CF85C005A531B /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6D35C206CF85C005A531B /* UIView+Addition.m */; };
 		04B92FE0206A28B200FECA45 /* SortAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B92FDF206A28B200FECA45 /* SortAlgorithm.m */; };
 		04C55B212064E85A00571715 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55B202064E85A00571715 /* Person.m */; };
 		04C55B242064ED9900571715 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55B232064ED9900571715 /* Bird.m */; };
@@ -85,6 +87,11 @@
 		04A4E68320196C63000F6370 /* AssetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetModel.m; sourceTree = "<group>"; };
 		04A4E6852019C3B6000F6370 /* PreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
 		04A4E6862019C3B6000F6370 /* PreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		04A6D357206CF221005A531B /* EXLNeededTabeleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXLNeededTabeleView.m; sourceTree = "<group>"; };
+		04A6D358206CF221005A531B /* EXLNeededTabeleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXLNeededTabeleView.h; sourceTree = "<group>"; };
+		04A6D35B206CF85C005A531B /* UIView+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		04A6D35C206CF85C005A531B /* UIView+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		04A6D35E206CF887005A531B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04B92FDE206A28B200FECA45 /* SortAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAlgorithm.h; sourceTree = "<group>"; };
 		04B92FDF206A28B200FECA45 /* SortAlgorithm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortAlgorithm.m; sourceTree = "<group>"; };
 		04C55B1F2064E85A00571715 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -160,6 +167,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04A6D35A206CF229005A531B /* NeedTableview */,
 				04B92FDD206A287A00FECA45 /* SortAlgorithm */,
 				04C55B352065085A00571715 /* Load+initialize */,
 				04C55B2A2064F39A00571715 /* Config */,
@@ -197,6 +205,15 @@
 				75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04A6D35A206CF229005A531B /* NeedTableview */ = {
+			isa = PBXGroup;
+			children = (
+				04A6D358206CF221005A531B /* EXLNeededTabeleView.h */,
+				04A6D357206CF221005A531B /* EXLNeededTabeleView.m */,
+			);
+			path = NeedTableview;
 			sourceTree = "<group>";
 		};
 		04B92FDD206A287A00FECA45 /* SortAlgorithm */ = {
@@ -249,6 +266,7 @@
 				042E81D2200D933700AB47AB /* LaunchScreen.storyboard */,
 				042E81D5200D933700AB47AB /* Info.plist */,
 				042E81D6200D933700AB47AB /* main.m */,
+				04A6D35E206CF887005A531B /* PrefixHeader.pch */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -262,6 +280,8 @@
 				04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */,
 				0406C5CE20565F9D00C91098 /* UIImage+ClipVIew.h */,
 				0406C5CF20565F9D00C91098 /* UIImage+ClipVIew.m */,
+				04A6D35B206CF85C005A531B /* UIView+Addition.h */,
+				04A6D35C206CF85C005A531B /* UIView+Addition.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -476,9 +496,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A6D35D206CF85C005A531B /* UIView+Addition.m in Sources */,
 				04C55B272064EDB700571715 /* Monkey.m in Sources */,
 				0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */,
 				04C55B3B20650A9300571715 /* Son.m in Sources */,
+				04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */,
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
 				04A4E68420196C63000F6370 /* AssetModel.m in Sources */,
 				04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */,
@@ -654,6 +676,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G6EP3AMGZ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = /Users/jack/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = TestDemo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -681,6 +704,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G6EP3AMGZ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = /Users/jack/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = TestDemo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
