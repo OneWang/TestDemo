@@ -67,13 +67,6 @@
     [self testGCDSemaphore];
 }
 
-- (void)testNeedTableview{
-//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-//    CGFloat height = [UIScreen mainScreen].bounds.size.height;
-//    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, width, height) style:UITableViewStyleGrouped];
-//    tableView.delegate = self;
-}
-
 - (void)testGCDSemaphore{
     // 创建队列组
     dispatch_group_t group = dispatch_group_create();
@@ -89,12 +82,6 @@
             // 每次发送信号则semaphore会+1，
             dispatch_semaphore_signal(semaphore);
         });
-//        dispatch_async(queue, ^{
-//            NSLog(@"%i===%@",i,[NSThread currentThread]);
-//            sleep(2);
-//            // 每次发送信号则semaphore会+1，
-//            dispatch_semaphore_signal(semaphore);
-//        });
     }
     
 //    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
