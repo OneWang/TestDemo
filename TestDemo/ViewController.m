@@ -64,7 +64,36 @@
     
 //    SortAlgorithm *sort = [[SortAlgorithm alloc] init];
 
-    [self testGCDBarrier];
+    [self testGCD];
+}
+
+- (void)testGCD{
+    //并发队列同步派发任务
+    dispatch_queue_t my_queue2 = dispatch_queue_create("my_queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        dispatch_sync(my_queue2, ^{ // block 1
+            sleep(2);
+            NSLog(@"1-%@", [NSThread currentThread]);
+        });
+    });
+    sleep(0.5);
+    dispatch_sync(my_queue2, ^{ // block 2
+        dispatch_async(my_queue2, ^{ // block 3
+            NSLog(@"2-%@", [NSThread currentThread]);
+        });
+        sleep(1);
+        NSLog(@"3-%@", [NSThread currentThread]);
+    });
+    NSLog(@"4-%@", [NSThread currentThread]);
+    
+    //串行队列同步派发任务
+//    dispatch_queue_t serial = dispatch_queue_create("串行", DISPATCH_QUEUE_SERIAL);
+//    dispatch_sync(serial, ^{
+//        NSLog(@"3%@",[NSThread currentThread]);
+//    });
+//    dispatch_sync(serial, ^{
+//        NSLog(@"4%@",[NSThread currentThread]);
+//    });
 }
 
 - (void)testGCDBarrier{
