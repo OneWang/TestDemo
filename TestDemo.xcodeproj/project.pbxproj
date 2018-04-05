@@ -17,6 +17,7 @@
 		042E81E1200D933700AB47AB /* TestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81E0200D933700AB47AB /* TestDemoTests.m */; };
 		042E81EC200D933700AB47AB /* TestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81EB200D933700AB47AB /* TestDemoUITests.m */; };
 		042E81FB200D969300AB47AB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E81FA200D969300AB47AB /* MediaPlayer.framework */; };
+		042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */ = {isa = PBXBuildFile; fileRef = 042F63CC20764002005A9EF7 /* MultiThreads.m */; };
 		04489E60206E420E00F9300A /* BreakPointDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489E5F206E420E00F9300A /* BreakPointDownLoad.m */; };
 		045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045158882011D2F7001E37C8 /* UIView+ClipView.m */; };
 		04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67A20186D78000F6370 /* AssetViewController.m */; };
@@ -76,6 +77,8 @@
 		042E81EB200D933700AB47AB /* TestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDemoUITests.m; sourceTree = "<group>"; };
 		042E81ED200D933700AB47AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042E81FA200D969300AB47AB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		042F63CB20764002005A9EF7 /* MultiThreads.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreads.h; sourceTree = "<group>"; };
+		042F63CC20764002005A9EF7 /* MultiThreads.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreads.m; sourceTree = "<group>"; };
 		04489E5E206E420E00F9300A /* BreakPointDownLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreakPointDownLoad.h; sourceTree = "<group>"; };
 		04489E5F206E420E00F9300A /* BreakPointDownLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakPointDownLoad.m; sourceTree = "<group>"; };
 		045158872011D2F7001E37C8 /* UIView+ClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ClipView.h"; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				042F63CA20763A49005A9EF7 /* GCD */,
 				04489E5D206E406400F9300A /* BreakPointDownLoad */,
 				04A6D35A206CF229005A531B /* NeedTableview */,
 				04B92FDD206A287A00FECA45 /* SortAlgorithm */,
@@ -209,6 +213,15 @@
 				75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		042F63CA20763A49005A9EF7 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				042F63CB20764002005A9EF7 /* MultiThreads.h */,
+				042F63CC20764002005A9EF7 /* MultiThreads.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 		04489E5D206E406400F9300A /* BreakPointDownLoad */ = {
@@ -524,6 +537,7 @@
 				04B92FE0206A28B200FECA45 /* SortAlgorithm.m in Sources */,
 				042E81CC200D933700AB47AB /* ViewController.m in Sources */,
 				042E81D7200D933700AB47AB /* main.m in Sources */,
+				042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */,
 				04C55B4120650C6800571715 /* Son+category.m in Sources */,
 				04A4E6872019C3B6000F6370 /* PreviewViewController.m in Sources */,
 				04C55B212064E85A00571715 /* Person.m in Sources */,
