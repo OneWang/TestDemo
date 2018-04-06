@@ -45,7 +45,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     SortAlgorithm *sort = [[SortAlgorithm alloc] init];
     NSArray *array = @[@12,@2,@23,@3,@45,@12,@9,@140].mutableCopy;
-    [sort quickSortArray:array withLeftIndex:0 andRightIndex:7];
+    [sort mergerSort:[NSMutableArray arrayWithArray:array] leftIndex:0 rightIndex:7];
 }
 
 //测试两个字符串的初始化

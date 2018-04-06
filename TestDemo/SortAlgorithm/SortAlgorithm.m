@@ -12,7 +12,7 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        quickSort([NSMutableArray arrayWithArray:@[@12,@2,@23,@3,@45,@12,@9,@140]], 0, 7);
+
     }
     return self;
 }
@@ -150,6 +150,72 @@ void quickSort(NSMutableArray *arr, int L, int R) {
 
 /**
  归并排序
+ 将两个已排好序的数组合并成一个有序的数组；
+ 1.将元素分割开来，看成是有序的数组，进行比较合并；
+ 2.不断拆分和合并，知道只有一个元素；
  */
+
+- (void)mergerSort:(NSMutableArray *)dataArray leftIndex:(NSInteger)left rightIndex:(NSInteger)right{
+    if (left == right) return;  //如果左边索引和右边索引相等，就说明数组中只有一个数
+    NSInteger middle = (left + right) / 2;  //分割中间值
+    //分割数组
+    [self mergerSort:dataArray leftIndex:left rightIndex:middle];
+    [self mergerSort:dataArray leftIndex:middle + 1 rightIndex:right];
+    
+    //合并数组
+    [self mergerArray:dataArray left:left middle:middle + 1 right:right];
+    
+    NSLog(@"归并：%@",dataArray);
+}
+
+/**
+ 合并数组
+
+ @param dataArray 需要合并的数组
+ @param left 数组左边的索引
+ @param middle 数组中间的分割索引
+ @param right 数组右边的索引
+ */
+- (void)mergerArray:(NSMutableArray *)dataArray left:(NSInteger)left middle:(NSInteger)middle right:(NSInteger)right{
+    //分别定义左右两边的数组
+    NSMutableArray *leftArray = [NSMutableArray arrayWithCapacity:middle - left];
+    NSMutableArray *rightArray = [NSMutableArray arrayWithCapacity:right - middle + 1];
+    
+    //分别将合并的数组放入新定义的数组中
+    for (NSInteger i = left; i < middle; i ++) {
+        leftArray[i - left] = dataArray[i];
+    }
+    for (NSInteger i = middle; i <= right; i ++) {
+        rightArray[i - middle] = dataArray[i];
+    }
+    
+    //然后比较左右两边两个数组中的大小
+    NSInteger i = 0,j = 0;
+    NSInteger k = left;
+    while (i < leftArray.count && j < rightArray.count) {
+        if ([leftArray[i] integerValue] < [rightArray[j] integerValue]) {
+            dataArray[k] = leftArray[i];
+            i ++;
+            k ++;
+        }else{
+            dataArray[k] = rightArray[j];
+            j ++;
+            k ++;
+        }
+    }
+    
+    //如果左边的数组还没有比较完，而右边的数组都已经比较完成了，那么就将左边数组中的数放到数组的后面（剩下的数字都是大数字）
+    while (i < leftArray.count) {
+        dataArray[k] = leftArray[i];
+        i ++;
+        k ++;
+    }
+    //同理
+    while (j < rightArray.count) {
+        dataArray[k] = rightArray[j];
+        j ++;
+        k ++;
+    }
+}
 
 @end
