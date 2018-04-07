@@ -25,9 +25,10 @@
 - (void)setResult:(id)result{
     _result = result;
     
+    __weak typeof(self)weakSelf = self;
     //获取照片数组
     [[AssetImageManager shardInstance] getAlumbAssetFetchResult:result completion:^(NSArray<AssetModel *> *models) {
-        _models = models;
+        weakSelf.models = models;
     }];
 }
 

@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface MainModel : NSObject
-
+/** name */
+@property (copy, nonatomic) NSString *name;
+/** 目标 */
+@property (copy, nonatomic) Class destationVC;
 @end

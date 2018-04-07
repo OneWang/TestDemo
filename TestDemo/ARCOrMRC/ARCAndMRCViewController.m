@@ -12,26 +12,50 @@
 
 @end
 
+__weak NSString *string_weak = nil;
 @implementation ARCAndMRCViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+//    NSString *string = [NSString stringWithFormat:@"jackonewang"];
+//    string_weak = string;
+
+//    @autoreleasepool{
+//        NSString *string = [NSString stringWithFormat:@"jackonewang"];
+//        string_weak = string;
+//    }
+    
+    NSString *string = nil;
+    @autoreleasepool{
+        string = [NSString stringWithFormat:@"jackonewang"];
+        string_weak = string;
+    }
+    
+    NSLog(@"%@==",string_weak);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"%s----%@",__func__,string_weak);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"%s----%@",__func__,string_weak);
 }
-*/
+
+//测试两个字符串的初始化
+- (void)testStringAddress{
+    NSString *str1 = @"123";
+    NSString *str2 = [NSString stringWithFormat:@"%@",@"123"];
+    if (str1 == str2) {
+        NSLog(@"as");
+    }else{
+        NSLog(@"sdf");
+    }
+}
 
 @end
