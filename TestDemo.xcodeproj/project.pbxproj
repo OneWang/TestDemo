@@ -19,6 +19,8 @@
 		042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */ = {isa = PBXBuildFile; fileRef = 042F63CC20764002005A9EF7 /* MultiThreads.m */; };
 		04489E60206E420E00F9300A /* BreakPointDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489E5F206E420E00F9300A /* BreakPointDownLoad.m */; };
 		045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045158882011D2F7001E37C8 /* UIView+ClipView.m */; };
+		045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */; };
+		0455882E2079CD200052D9B8 /* Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455882D2079CD200052D9B8 /* Stuff.m */; };
 		04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67A20186D78000F6370 /* AssetViewController.m */; };
 		04A4E67E20186EDD000F6370 /* AssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67D20186EDD000F6370 /* AssetCell.m */; };
 		04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E6802018A34F000F6370 /* AssetImageManager.m */; };
@@ -89,6 +91,10 @@
 		04489E5F206E420E00F9300A /* BreakPointDownLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakPointDownLoad.m; sourceTree = "<group>"; };
 		045158872011D2F7001E37C8 /* UIView+ClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ClipView.h"; sourceTree = "<group>"; };
 		045158882011D2F7001E37C8 /* UIView+ClipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ClipView.m"; sourceTree = "<group>"; };
+		045588262079C8200052D9B8 /* KVCKVOTheoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCKVOTheoryViewController.h; sourceTree = "<group>"; };
+		045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCKVOTheoryViewController.m; sourceTree = "<group>"; };
+		0455882C2079CD200052D9B8 /* Stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stuff.h; sourceTree = "<group>"; };
+		0455882D2079CD200052D9B8 /* Stuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stuff.m; sourceTree = "<group>"; };
 		04A4E67920186D78000F6370 /* AssetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetViewController.h; sourceTree = "<group>"; };
 		04A4E67A20186D78000F6370 /* AssetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetViewController.m; sourceTree = "<group>"; };
 		04A4E67C20186EDD000F6370 /* AssetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCell.h; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				045588252079C7A80052D9B8 /* KVO、KVC实现原理 */,
 				04C9FCC22078F99A00EE8DB6 /* MainVC */,
 				04C9FCBE2078F8B800EE8DB6 /* HeightLevelCorner */,
 				04C9FCB72078EE6100EE8DB6 /* ARCOrMRC */,
@@ -257,6 +264,17 @@
 				04489E5F206E420E00F9300A /* BreakPointDownLoad.m */,
 			);
 			path = BreakPointDownLoad;
+			sourceTree = "<group>";
+		};
+		045588252079C7A80052D9B8 /* KVO、KVC实现原理 */ = {
+			isa = PBXGroup;
+			children = (
+				045588262079C8200052D9B8 /* KVCKVOTheoryViewController.h */,
+				045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */,
+				0455882C2079CD200052D9B8 /* Stuff.h */,
+				0455882D2079CD200052D9B8 /* Stuff.m */,
+			);
+			path = "KVO、KVC实现原理";
 			sourceTree = "<group>";
 		};
 		04A6D35A206CF229005A531B /* NeedTableview */ = {
@@ -612,6 +630,7 @@
 				04C55B4120650C6800571715 /* Son+category.m in Sources */,
 				04A4E6872019C3B6000F6370 /* PreviewViewController.m in Sources */,
 				04C9FCBD2078F84A00EE8DB6 /* ARCAndMRCViewController.m in Sources */,
+				045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */,
 				04C55B212064E85A00571715 /* Person.m in Sources */,
 				04C9FCC52078F9A900EE8DB6 /* MainViewController.m in Sources */,
 				04C55B242064ED9900571715 /* Bird.m in Sources */,
@@ -619,6 +638,7 @@
 				04C00D742078E1EE000EA706 /* BlockAndPointerViewController.m in Sources */,
 				04C55B382065096800571715 /* Father.m in Sources */,
 				04C9FCC82078FACD00EE8DB6 /* MainModel.m in Sources */,
+				0455882E2079CD200052D9B8 /* Stuff.m in Sources */,
 				042E81C9200D933700AB47AB /* AppDelegate.m in Sources */,
 				045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */,
 				04C9FCC12078F8DA00EE8DB6 /* HeightLevelCornerViewController.m in Sources */,

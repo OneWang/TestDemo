@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "ARCAndMRCViewController.h"
+#import "KVCKVOTheoryViewController.h"
 #import "MainModel.h"
 #import <YYModel.h>
 
@@ -33,12 +34,18 @@
 - (void)initData{
     MainModel *model1 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([ARCAndMRCViewController class]),@"destationVC":[ARCAndMRCViewController class]}];
     [self.dataArray addObject:model1];
+    
+    MainModel *model2 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([KVCKVOTheoryViewController class]),@"destationVC":[KVCKVOTheoryViewController class]}];
+    [self.dataArray addObject:model2];
 }
 
 - (void)createChildViews{
     self.navigationItem.title = @"testDemo";
     _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
     [self.view addSubview:_tableView];
+    _tableView.estimatedRowHeight = 0.f;
+    _tableView.estimatedSectionFooterHeight = 0.f;
+    _tableView.estimatedSectionHeaderHeight = 0.f;
     _tableView.delegate = self;
     _tableView.dataSource = self;
 }
@@ -62,6 +69,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     MainModel *model = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:[[model.destationVC alloc] init] animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.00001f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.00001f;
 }
 
 #pragma mark - setter and geter

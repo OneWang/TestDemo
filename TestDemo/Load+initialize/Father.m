@@ -10,12 +10,12 @@
 
 @implementation Father
 
-+ (void)load{
-    NSLog(@"%s====%@",__FUNCTION__,[self class]);
-}
-
-+ (void)initialize{
-    NSLog(@"%s====%@",__FUNCTION__,[self class]);
-}
+//+ (void)load{
+//    NSLog(@"%s====%@",__FUNCTION__,[self class]);
+//}
+//
+//+ (void)initialize{
+//    NSLog(@"%s====%@",__FUNCTION__,[self class]);
+//}
 
 @end
