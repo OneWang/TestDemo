@@ -44,6 +44,9 @@
 		04C9FCC12078F8DA00EE8DB6 /* HeightLevelCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCC02078F8DA00EE8DB6 /* HeightLevelCornerViewController.m */; };
 		04C9FCC52078F9A900EE8DB6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCC42078F9A900EE8DB6 /* MainViewController.m */; };
 		04C9FCC82078FACD00EE8DB6 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCC72078FACD00EE8DB6 /* MainModel.m */; };
+		04E0EC2A207CA77D00D38A5D /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC29207CA77D00D38A5D /* TouchViewController.m */; };
+		04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2C207CA87300D38A5D /* CustomView.m */; };
+		04E0EC30207CAC9E00D38A5D /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2F207CAC9E00D38A5D /* SubView.m */; };
 		04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */; };
 		309A92F81F799A3E0A0E52CF /* libPods-TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */; };
 /* End PBXBuildFile section */
@@ -142,6 +145,12 @@
 		04C9FCC42078F9A900EE8DB6 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		04C9FCC62078FACD00EE8DB6 /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		04C9FCC72078FACD00EE8DB6 /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		04E0EC28207CA77D00D38A5D /* TouchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
+		04E0EC29207CA77D00D38A5D /* TouchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchViewController.m; sourceTree = "<group>"; };
+		04E0EC2B207CA87300D38A5D /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		04E0EC2C207CA87300D38A5D /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		04E0EC2E207CAC9E00D38A5D /* SubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubView.h; sourceTree = "<group>"; };
+		04E0EC2F207CAC9E00D38A5D /* SubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubView.m; sourceTree = "<group>"; };
 		04F325402052DBCF00BB884B /* UIViewController+viewdidload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+viewdidload.h"; sourceTree = "<group>"; };
 		04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+viewdidload.m"; sourceTree = "<group>"; };
 		11E8BBCF2939482AEE1E8519 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +210,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04E0EC27207CA76300D38A5D /* 事件传递 */,
 				045588252079C7A80052D9B8 /* KVO、KVC实现原理 */,
 				04C9FCC22078F99A00EE8DB6 /* MainVC */,
 				04C9FCBE2078F8B800EE8DB6 /* HeightLevelCorner */,
@@ -414,6 +424,19 @@
 			path = MainVC;
 			sourceTree = "<group>";
 		};
+		04E0EC27207CA76300D38A5D /* 事件传递 */ = {
+			isa = PBXGroup;
+			children = (
+				04E0EC28207CA77D00D38A5D /* TouchViewController.h */,
+				04E0EC29207CA77D00D38A5D /* TouchViewController.m */,
+				04E0EC2B207CA87300D38A5D /* CustomView.h */,
+				04E0EC2C207CA87300D38A5D /* CustomView.m */,
+				04E0EC2E207CAC9E00D38A5D /* SubView.h */,
+				04E0EC2F207CAC9E00D38A5D /* SubView.m */,
+			);
+			path = "事件传递";
+			sourceTree = "<group>";
+		};
 		63CC9FDA0BFD5B60D5BB039B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +636,7 @@
 				04C55B272064EDB700571715 /* Monkey.m in Sources */,
 				0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */,
 				04C00D712078D745000EA706 /* BlockAndPointer.m in Sources */,
+				04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */,
 				04C55B3B20650A9300571715 /* Son.m in Sources */,
 				04C00D7A2078E21D000EA706 /* SortAlgorithmViewController.m in Sources */,
 				04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */,
@@ -624,6 +648,7 @@
 				04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */,
 				04489E60206E420E00F9300A /* BreakPointDownLoad.m in Sources */,
 				04B92FE0206A28B200FECA45 /* SortAlgorithm.m in Sources */,
+				04E0EC2A207CA77D00D38A5D /* TouchViewController.m in Sources */,
 				042E81CC200D933700AB47AB /* PhotoViewController.m in Sources */,
 				042E81D7200D933700AB47AB /* main.m in Sources */,
 				042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */,
@@ -632,6 +657,7 @@
 				04C9FCBD2078F84A00EE8DB6 /* ARCAndMRCViewController.m in Sources */,
 				045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */,
 				04C55B212064E85A00571715 /* Person.m in Sources */,
+				04E0EC30207CAC9E00D38A5D /* SubView.m in Sources */,
 				04C9FCC52078F9A900EE8DB6 /* MainViewController.m in Sources */,
 				04C55B242064ED9900571715 /* Bird.m in Sources */,
 				04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */,

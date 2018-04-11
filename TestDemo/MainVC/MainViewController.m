@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "ARCAndMRCViewController.h"
 #import "KVCKVOTheoryViewController.h"
+#import "TouchViewController.h"
 #import "MainModel.h"
 #import <YYModel.h>
 
@@ -37,6 +38,9 @@
     
     MainModel *model2 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([KVCKVOTheoryViewController class]),@"destationVC":[KVCKVOTheoryViewController class]}];
     [self.dataArray addObject:model2];
+    
+    MainModel *model3 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([TouchViewController class]),@"destationVC":[TouchViewController class]}];
+    [self.dataArray addObject:model3];
 }
 
 - (void)createChildViews{
