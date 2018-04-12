@@ -40,9 +40,10 @@
 }
 
 - (void)setupNavigationView {
+    UIColor *mainColor = [UIColor colorWithRed:68/255.0 green:150/255.0 blue:241/255.0 alpha:1.0];
     CGFloat width = CGRectGetWidth(self.view.frame);
     UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 64)];
-    navView.backgroundColor = [UIColor blueColor];
+    navView.backgroundColor = mainColor;
     [self.view addSubview:navView];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(64, 20, width - 64 * 2, 44)];
@@ -53,12 +54,13 @@
     }else{
         titleLabel.text = @"相册";
     }
-    titleLabel.font = [UIFont systemFontOfSize:16];
+    titleLabel.font = [UIFont systemFontOfSize:18];
     [navView addSubview:titleLabel];
     
     UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     doneButton.frame = CGRectMake(self.view.frame.size.width - 54, 20, 44, 44);
     [doneButton setTitle:@"取消" forState:UIControlStateNormal];
+    doneButton.titleLabel.font = [UIFont systemFontOfSize:15];
     [doneButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     [navView addSubview:doneButton];
 }
@@ -72,8 +74,9 @@
     [self.view addSubview:tool];
     tool.backgroundColor = [UIColor whiteColor];
     
+    UIColor *mainColor = [UIColor colorWithRed:68/255.0 green:150/255.0 blue:241/255.0 alpha:1.0];
     UIButton *done = [UIButton buttonWithType:UIButtonTypeCustom];
-    [done setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [done setTitleColor:mainColor forState:UIControlStateNormal];
     CGRect frame = CGRectMake(self.view.frame.size.width - 55, 15, 45, 20);
     done.frame = frame;
     [done setTitle:@"完成" forState:UIControlStateNormal];
@@ -84,13 +87,13 @@
     count.font = [UIFont systemFontOfSize:10];
     [tool addSubview:count];
     count.textColor = [UIColor whiteColor];
-    count.frame = CGRectMake(self.view.frame.size.width - 100, 15, 20, 20);
+    count.frame = CGRectMake(self.view.frame.size.width - 80, 15, 20, 20);
     count.text = @"0";
     count.textAlignment = NSTextAlignmentCenter;
     count.layer.cornerRadius = 10;
     count.layer.masksToBounds = YES;
     self.countLabel = count;
-    count.backgroundColor = [UIColor blueColor];
+    count.backgroundColor = mainColor;
 }
 
 - (void)doneClick:(UIButton *)button{

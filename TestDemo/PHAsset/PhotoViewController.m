@@ -23,7 +23,7 @@
 /** collectionview */
 @property (weak, nonatomic) UICollectionView *collectionView;
 /** 照片数组 */
-@property (strong, nonatomic) NSArray *photoArray;
+@property (strong, nonatomic) NSMutableArray *photoArray;
 
 @end
 
@@ -39,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    [self createCollection];
 }
 
 - (void)testIvarList{
@@ -57,7 +57,13 @@
 - (void)testPointer{
     int arrayName[4] = {10,20,30,40};
     int *p = (int *)(&arrayName + 1);
-
+    
+    /*
+    1.(&arrayName + 1)：&arrayName是数组的地址（等价于指向arrayName数组的指针）
+    2.增加 1 会往后移动16个字节，开始是4个字节的位置，移动后就是16个字节后面的位置（也就是目前位置是20个字节）
+    3.最后又赋值给，int类型的指针p（int类型占4个字节）
+    4.所以(p - 1)就是减去4个字节，变成为16个字节的位置，输出的*(p - 1)值为40
+    */
     NSLog(@"%d",*(p - 1));
     NSLog(@"%p===%p",&arrayName,&arrayName + 1);
 
@@ -65,6 +71,7 @@
 }
 
 - (void)createCollection{
+    self.view.backgroundColor = [UIColor whiteColor];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat item_w = ([UIScreen mainScreen].bounds.size.width - 25) / 4;
     layout.itemSize = CGSizeMake(item_w, item_w);
@@ -83,16 +90,21 @@
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     if (self.photoArray.count == 8) {
-        return self.photoArray.count;
+        return _photoArray.count;
     }else{
-        return self.photoArray.count + 1;
+        return _photoArray.count + 1;
     }
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemCell" forIndexPath:indexPath];
-    if (indexPath.item < self.photoArray.count) {
-        cell.assetModel = self.photoArray[indexPath.item];
+    __weak typeof(self) weakSelf = self;
+    cell.callBack = ^(AssetModel *model) {
+        [weakSelf.photoArray removeObject:model];
+        [weakSelf.collectionView reloadData];
+    };
+    if (indexPath.item < _photoArray.count) {
+        cell.assetModel = _photoArray[indexPath.item];
     }else{
         cell.assetModel = nil;
     }
@@ -100,23 +112,18 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (self.photoArray.count == indexPath.item) {
+    if (_photoArray.count == indexPath.item) {
         AssetViewController *assetVC = [[AssetViewController alloc] init];
+        __weak typeof(self) weakSelf = self;
         assetVC.selectImage = ^(NSArray *imageArray) {
-            self.photoArray = imageArray;
-            [self.collectionView reloadData];
+            weakSelf.photoArray = imageArray.mutableCopy;
+            [weakSelf.collectionView reloadData];
         };
-        if (self.photoArray.count) {
-            assetVC.selectImages = self.photoArray;
+        if (_photoArray.count) {
+            assetVC.selectImages = _photoArray;
         }
         [self presentViewController:assetVC animated:YES completion:nil];
     }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

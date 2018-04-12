@@ -33,6 +33,7 @@
 
         UIButton *delete = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.contentView addSubview:delete];
+        self.deleteButton = delete;
         [delete setImage:[UIImage imageNamed:@"photo_delete"] forState:UIControlStateNormal];
         [delete addTarget:self action:@selector(deleteClick:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -40,7 +41,9 @@
 }
 
 - (void)deleteClick:(UIButton *)button{
-    
+    if (self.callBack) {
+        self.callBack(self.assetModel);
+    }
 }
 
 - (void)layoutSubviews{
@@ -57,7 +60,9 @@
         [[AssetImageManager shardInstance] getPhotoWithAsset:assetModel.asset photoSize:CGSizeMake(200, 200) completion:^(UIImage *photo, NSDictionary *info) {
             self.photoView.image = photo;
         }];
+        _deleteButton.hidden = NO;
     }else{
+        _deleteButton.hidden = YES;
         self.photoView.image = [UIImage imageNamed:@"AlbumAddBtn"];
     }
 }
