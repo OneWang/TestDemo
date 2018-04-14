@@ -127,13 +127,6 @@
     }
     [[AssetImageManager shardInstance] getPhotoLibraryOriginal:YES completion:^(AlbumModel *albumModel) {
         self.assetArray = [NSMutableArray arrayWithArray:albumModel.models];
-        for (AssetModel *model in self.assetArray) {
-            for (AssetModel *selectModel in self.selectImages) {
-                if (model == selectModel) {
-                    model.selected = YES;
-                }
-            }
-        }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
         });
