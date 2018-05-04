@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C5CF20565F9D00C91098 /* UIImage+ClipVIew.m */; };
+		040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C940F209C747D00A40C22 /* UIImage+CutImage.m */; };
 		042C1766201EC7EB006D1539 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C1765201EC7EB006D1539 /* ItemCell.m */; };
 		042E81C9200D933700AB47AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81C8200D933700AB47AB /* AppDelegate.m */; };
 		042E81CC200D933700AB47AB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81CB200D933700AB47AB /* PhotoViewController.m */; };
@@ -48,6 +49,7 @@
 		04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2C207CA87300D38A5D /* CustomView.m */; };
 		04E0EC30207CAC9E00D38A5D /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2F207CAC9E00D38A5D /* SubView.m */; };
 		04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */; };
+		04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72A492092C47E00BF9395 /* RunloopViewController.m */; };
 		309A92F81F799A3E0A0E52CF /* libPods-TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 /* Begin PBXFileReference section */
 		0406C5CE20565F9D00C91098 /* UIImage+ClipVIew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ClipVIew.h"; sourceTree = "<group>"; };
 		0406C5CF20565F9D00C91098 /* UIImage+ClipVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ClipVIew.m"; sourceTree = "<group>"; };
+		040C940E209C747D00A40C22 /* UIImage+CutImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CutImage.h"; sourceTree = "<group>"; };
+		040C940F209C747D00A40C22 /* UIImage+CutImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CutImage.m"; sourceTree = "<group>"; };
 		042C1764201EC7EB006D1539 /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		042C1765201EC7EB006D1539 /* ItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		042E81C4200D933700AB47AB /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +157,8 @@
 		04E0EC2F207CAC9E00D38A5D /* SubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubView.m; sourceTree = "<group>"; };
 		04F325402052DBCF00BB884B /* UIViewController+viewdidload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+viewdidload.h"; sourceTree = "<group>"; };
 		04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+viewdidload.m"; sourceTree = "<group>"; };
+		04F72A482092C47E00BF9395 /* RunloopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopViewController.h; sourceTree = "<group>"; };
+		04F72A492092C47E00BF9395 /* RunloopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopViewController.m; sourceTree = "<group>"; };
 		11E8BBCF2939482AEE1E8519 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F2226B2F3CA6FDCE887C40 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04F72A472092C46D00BF9395 /* RunLoop */,
 				04E0EC27207CA76300D38A5D /* 事件传递 */,
 				045588252079C7A80052D9B8 /* KVO、KVC实现原理 */,
 				04C9FCC22078F99A00EE8DB6 /* MainVC */,
@@ -409,6 +416,8 @@
 			children = (
 				04C9FCBF2078F8DA00EE8DB6 /* HeightLevelCornerViewController.h */,
 				04C9FCC02078F8DA00EE8DB6 /* HeightLevelCornerViewController.m */,
+				040C940E209C747D00A40C22 /* UIImage+CutImage.h */,
+				040C940F209C747D00A40C22 /* UIImage+CutImage.m */,
 			);
 			path = HeightLevelCorner;
 			sourceTree = "<group>";
@@ -435,6 +444,15 @@
 				04E0EC2F207CAC9E00D38A5D /* SubView.m */,
 			);
 			path = "事件传递";
+			sourceTree = "<group>";
+		};
+		04F72A472092C46D00BF9395 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				04F72A482092C47E00BF9395 /* RunloopViewController.h */,
+				04F72A492092C47E00BF9395 /* RunloopViewController.m */,
+			);
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		63CC9FDA0BFD5B60D5BB039B /* Pods */ = {
@@ -640,6 +658,7 @@
 				04C55B3B20650A9300571715 /* Son.m in Sources */,
 				04C00D7A2078E21D000EA706 /* SortAlgorithmViewController.m in Sources */,
 				04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */,
+				040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */,
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
 				04A4E68420196C63000F6370 /* AssetModel.m in Sources */,
 				04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */,
@@ -653,6 +672,7 @@
 				042E81D7200D933700AB47AB /* main.m in Sources */,
 				042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */,
 				04C55B4120650C6800571715 /* Son+category.m in Sources */,
+				04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */,
 				04A4E6872019C3B6000F6370 /* PreviewViewController.m in Sources */,
 				04C9FCBD2078F84A00EE8DB6 /* ARCAndMRCViewController.m in Sources */,
 				045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */,

@@ -13,6 +13,8 @@
 #import "PhotoViewController.h"
 #import "MainModel.h"
 #import <YYModel.h>
+#import "RunloopViewController.h"
+#import "HeightLevelCornerViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -45,6 +47,12 @@
     
     MainModel *model4 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([PhotoViewController class]),@"destationVC":[PhotoViewController class]}];
     [self.dataArray addObject:model4];
+    
+    MainModel *model5 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([RunloopViewController class]),@"destationVC":[RunloopViewController class]}];
+    [self.dataArray addObject:model5];
+    
+    MainModel *model6 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([HeightLevelCornerViewController class]),@"destationVC":[HeightLevelCornerViewController class]}];
+    [self.dataArray addObject:model6];
 }
 
 - (void)createChildViews{
