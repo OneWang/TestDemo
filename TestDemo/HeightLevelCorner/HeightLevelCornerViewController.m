@@ -7,6 +7,7 @@
 //
 
 #import "HeightLevelCornerViewController.h"
+#import "UIImage+CutImage.h"
 
 @interface HeightLevelCornerViewController ()
 
@@ -58,9 +59,12 @@
     //方式三
     UIImageView *imageThreeView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
     UIImage *cutimage = [UIImage imageNamed:@"屏幕快照 2018-01-18 下午6.04.02"];
-    imageThreeView.image = [self drawCircleImage:cutimage];    
-    imageThreeView.layer.borderColor = [UIColor redColor].CGColor;
-    imageThreeView.layer.borderWidth = 5.f;
+    UIImage *cutImage = [cutimage cutCircleImage];
+    cutImage.borderWidth = 20.f;
+    cutImage.borderColor = [UIColor greenColor];
+    imageThreeView.image = cutImage;
+//    imageThreeView.layer.borderColor = [UIColor redColor].CGColor;
+//    imageThreeView.layer.borderWidth = 5.f;
     [self.view addSubview:imageThreeView];
 }
 
