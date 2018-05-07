@@ -19,6 +19,16 @@
     return [super hitTest:point withEvent:event];
 }
 
+- (void)drawRect:(CGRect)rect{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetRGBStrokeColor (context, 142.0/ 255.0, 161.0/ 255.0, 189.0/ 255.0, 1.0);
+    CGContextSetLineWidth(context, 10.0 );//这里设置成了1但画出的线还是2px,给我们的感觉好像最小只能是2px。
+    CGContextMoveToPoint(context, 1.0 , 24.0 );
+    CGContextAddLineToPoint(context, 83.0 , 24.0 );
+    CGContextClosePath(context);
+    CGContextStrokePath(context);
+}
+
 @end
 
 @implementation RedView

@@ -59,12 +59,12 @@
     //方式三
     UIImageView *imageThreeView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
     UIImage *cutimage = [UIImage imageNamed:@"屏幕快照 2018-01-18 下午6.04.02"];
-    cutimage.borderWidth = 50.f;
+    cutimage.borderWidth = 5.f;
     cutimage.borderColor = [UIColor greenColor];
     UIImage *cutImage = [cutimage cutCircleImage];
     imageThreeView.image = cutImage;
-    imageThreeView.layer.borderColor = [UIColor redColor].CGColor;
-    imageThreeView.layer.borderWidth = 5.f;
+//    imageThreeView.layer.borderColor = [UIColor redColor].CGColor;
+//    imageThreeView.layer.borderWidth = 5.f;
     [self.view addSubview:imageThreeView];
 }
 
