@@ -18,6 +18,10 @@
 		042E81EC200D933700AB47AB /* TestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81EB200D933700AB47AB /* TestDemoUITests.m */; };
 		042E81FB200D969300AB47AB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E81FA200D969300AB47AB /* MediaPlayer.framework */; };
 		042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */ = {isa = PBXBuildFile; fileRef = 042F63CC20764002005A9EF7 /* MultiThreads.m */; };
+		043FA85D20A98296004274B5 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FA85C20A98296004274B5 /* ImageCell.m */; };
+		043FA86020A98346004274B5 /* TestImageCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FA85F20A98346004274B5 /* TestImageCellViewController.m */; };
+		043FA86220A984B7004274B5 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043FA86120A984B7004274B5 /* 1.plist */; };
+		043FA86520A9853B004274B5 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FA86420A9853B004274B5 /* ImageModel.m */; };
 		04489E60206E420E00F9300A /* BreakPointDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489E5F206E420E00F9300A /* BreakPointDownLoad.m */; };
 		045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045158882011D2F7001E37C8 /* UIView+ClipView.m */; };
 		045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */; };
@@ -94,6 +98,13 @@
 		042E81FA200D969300AB47AB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		042F63CB20764002005A9EF7 /* MultiThreads.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreads.h; sourceTree = "<group>"; };
 		042F63CC20764002005A9EF7 /* MultiThreads.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreads.m; sourceTree = "<group>"; };
+		043FA85B20A98296004274B5 /* ImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		043FA85C20A98296004274B5 /* ImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		043FA85E20A98346004274B5 /* TestImageCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestImageCellViewController.h; sourceTree = "<group>"; };
+		043FA85F20A98346004274B5 /* TestImageCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestImageCellViewController.m; sourceTree = "<group>"; };
+		043FA86120A984B7004274B5 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		043FA86320A9853B004274B5 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		043FA86420A9853B004274B5 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		04489E5E206E420E00F9300A /* BreakPointDownLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreakPointDownLoad.h; sourceTree = "<group>"; };
 		04489E5F206E420E00F9300A /* BreakPointDownLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakPointDownLoad.m; sourceTree = "<group>"; };
 		045158872011D2F7001E37C8 /* UIView+ClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ClipView.h"; sourceTree = "<group>"; };
@@ -216,6 +227,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				043FA85A20A98250004274B5 /* TestCellImage */,
 				04F72A472092C46D00BF9395 /* RunLoop */,
 				04E0EC27207CA76300D38A5D /* 事件传递 */,
 				045588252079C7A80052D9B8 /* KVO、KVC实现原理 */,
@@ -272,6 +284,20 @@
 				04C00D762078E1FF000EA706 /* MultiThreadsViewController.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		043FA85A20A98250004274B5 /* TestCellImage */ = {
+			isa = PBXGroup;
+			children = (
+				043FA86120A984B7004274B5 /* 1.plist */,
+				043FA85B20A98296004274B5 /* ImageCell.h */,
+				043FA85C20A98296004274B5 /* ImageCell.m */,
+				043FA85E20A98346004274B5 /* TestImageCellViewController.h */,
+				043FA85F20A98346004274B5 /* TestImageCellViewController.m */,
+				043FA86320A9853B004274B5 /* ImageModel.h */,
+				043FA86420A9853B004274B5 /* ImageModel.m */,
+			);
+			path = TestCellImage;
 			sourceTree = "<group>";
 		};
 		04489E5D206E406400F9300A /* BreakPointDownLoad */ = {
@@ -573,6 +599,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043FA86220A984B7004274B5 /* 1.plist in Resources */,
 				042E81D1200D933700AB47AB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C00D772078E1FF000EA706 /* MultiThreadsViewController.m in Sources */,
+				043FA85D20A98296004274B5 /* ImageCell.m in Sources */,
 				04A6D35D206CF85C005A531B /* UIView+Addition.m in Sources */,
 				04C55B272064EDB700571715 /* Monkey.m in Sources */,
 				0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */,
@@ -657,6 +685,7 @@
 				04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */,
 				04C55B3B20650A9300571715 /* Son.m in Sources */,
 				04C00D7A2078E21D000EA706 /* SortAlgorithmViewController.m in Sources */,
+				043FA86520A9853B004274B5 /* ImageModel.m in Sources */,
 				04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */,
 				040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */,
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
@@ -688,6 +717,7 @@
 				042E81C9200D933700AB47AB /* AppDelegate.m in Sources */,
 				045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */,
 				04C9FCC12078F8DA00EE8DB6 /* HeightLevelCornerViewController.m in Sources */,
+				043FA86020A98346004274B5 /* TestImageCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
