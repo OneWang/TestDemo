@@ -34,6 +34,7 @@
 		04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6D357206CF221005A531B /* EXLNeededTabeleView.m */; };
 		04A6D35D206CF85C005A531B /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6D35C206CF85C005A531B /* UIView+Addition.m */; };
 		04B92FE0206A28B200FECA45 /* SortAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B92FDF206A28B200FECA45 /* SortAlgorithm.m */; };
+		04BB141120AD95E00070A57D /* SortAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BB141020AD95E00070A57D /* SortAlgorithm.cpp */; };
 		04C00D712078D745000EA706 /* BlockAndPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C00D702078D745000EA706 /* BlockAndPointer.m */; };
 		04C00D742078E1EE000EA706 /* BlockAndPointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C00D732078E1EE000EA706 /* BlockAndPointerViewController.m */; };
 		04C00D772078E1FF000EA706 /* MultiThreadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C00D762078E1FF000EA706 /* MultiThreadsViewController.m */; };
@@ -130,6 +131,7 @@
 		04A6D35E206CF887005A531B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04B92FDE206A28B200FECA45 /* SortAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAlgorithm.h; sourceTree = "<group>"; };
 		04B92FDF206A28B200FECA45 /* SortAlgorithm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortAlgorithm.m; sourceTree = "<group>"; };
+		04BB141020AD95E00070A57D /* SortAlgorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortAlgorithm.cpp; sourceTree = "<group>"; };
 		04C00D6F2078D745000EA706 /* BlockAndPointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockAndPointer.h; sourceTree = "<group>"; };
 		04C00D702078D745000EA706 /* BlockAndPointer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockAndPointer.m; sourceTree = "<group>"; };
 		04C00D722078E1EE000EA706 /* BlockAndPointerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockAndPointerViewController.h; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				04B92FDF206A28B200FECA45 /* SortAlgorithm.m */,
 				04C00D782078E21D000EA706 /* SortAlgorithmViewController.h */,
 				04C00D792078E21D000EA706 /* SortAlgorithmViewController.m */,
+				04BB141020AD95E00070A57D /* SortAlgorithm.cpp */,
 			);
 			path = SortAlgorithm;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				04C9FCBD2078F84A00EE8DB6 /* ARCAndMRCViewController.m in Sources */,
 				045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */,
 				04C55B212064E85A00571715 /* Person.m in Sources */,
+				04BB141120AD95E00070A57D /* SortAlgorithm.cpp in Sources */,
 				04E0EC30207CAC9E00D38A5D /* SubView.m in Sources */,
 				04C9FCC52078F9A900EE8DB6 /* MainViewController.m in Sources */,
 				04C55B242064ED9900571715 /* Bird.m in Sources */,

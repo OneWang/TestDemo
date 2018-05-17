@@ -16,6 +16,7 @@
 #import "RunloopViewController.h"
 #import "HeightLevelCornerViewController.h"
 #import "TestImageCellViewController.h"
+#import "MultiThreadsViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -57,6 +58,9 @@
     
     MainModel *model7 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([TestImageCellViewController class]),@"destationVC":[TestImageCellViewController class]}];
     [self.dataArray addObject:model7];
+    
+    MainModel *model8 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([MultiThreadsViewController class]),@"destationVC":[MultiThreadsViewController class]}];
+    [self.dataArray addObject:model8];
 }
 
 - (void)createChildViews{
