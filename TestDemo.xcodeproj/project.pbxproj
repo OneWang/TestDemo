@@ -48,7 +48,7 @@
 		04C55B3B20650A9300571715 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55B3A20650A9300571715 /* Son.m */; };
 		04C55B3E20650B6400571715 /* Father+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55B3D20650B6400571715 /* Father+category.m */; };
 		04C55B4120650C6800571715 /* Son+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55B4020650C6800571715 /* Son+category.m */; };
-		04C9FCBD2078F84A00EE8DB6 /* ARCAndMRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCBC2078F84A00EE8DB6 /* ARCAndMRCViewController.m */; };
+		04C9FCBD2078F84A00EE8DB6 /* ARCAndMRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCBC2078F84A00EE8DB6 /* ARCAndMRCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04C9FCC12078F8DA00EE8DB6 /* HeightLevelCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCC02078F8DA00EE8DB6 /* HeightLevelCornerViewController.m */; };
 		04C9FCC52078F9A900EE8DB6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCC42078F9A900EE8DB6 /* MainViewController.m */; };
 		04C9FCC82078FACD00EE8DB6 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FCC72078FACD00EE8DB6 /* MainModel.m */; };

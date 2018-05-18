@@ -12,7 +12,7 @@
 
 @end
 
-__weak NSString *string_weak = nil;
+//__weak NSString *string_weak = nil;
 @implementation ARCAndMRCViewController
 
 - (void)viewDidLoad {
@@ -20,10 +20,40 @@ __weak NSString *string_weak = nil;
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //C字符长度临界值为4的时候引用计数器为-1，当大于4的时候引用计数器为1
+    NSString *test = [NSString stringWithFormat:@"%s,%d","aaaaa",12];
+    NSString *str2_2 = [NSString stringWithFormat:@"%s,%d","str2",22];
+    NSLog(@"%zd********%zd",test.retainCount,str2_2.retainCount);
+    
+    //OC字符串长度临界值为10的时候引用计数器为-1，当大于10的时候引用计数器为1
+    NSString *test1 = [NSString stringWithFormat:@"%@",@"123456789"];
+    NSString *test2 = [NSString stringWithFormat:@"%@",@"asdfghjklq"];
+    //文字的话直接就是1
+    NSString *test3 = [NSString stringWithFormat:@"%@",@"问"];
+    NSLog(@"%zd*******%zd*********%zd",test1.retainCount,test2.retainCount,test3.retainCount);
+    
+    /**
+     1）对于通过initWithString和stringWithString(字面量)创建的NSString对象，不管字符串的内容和长度怎么变化，该对象始终是存储在常量区的，没有引用计数一说；硬要加一个引用计数的话，那么就是无符号长整型的最大值
+     
+     2）对于通过initWithFormat和stringWithFormat创建的NSString对象，如果字符串内容是汉字，那么，该对象和Objective-C中其他类型的对象是一致的；如果字符串内容是非汉字，那么，当字符串长度小于10个时，该对象存储区域在已知的五大区域之外，且随着字符串长度的变化，存储地址会有很大变化；当字符串长度超过10个以后，该对象与Objective-C中其他类型的对象一致
+     
+     retainCount的不同本质上是因为NSString类簇返回的子类的不同，__NSCFConstantString 和__NSTaggedPointerString初始值为-1，__NSCFString为1
+     亦可通过方法来区分得到的字符串的类型
+     
+     @”“格式得到的为常量字符串
+     stringWithFormat得到的可能为__NSCFConstantString或者__NSTaggedPointerString
+     stringWithString
+     
+     stringWithString+__NSCFConstantString得到__NSCFConstantString
+     stringWithString+stringWithFormat得到__NSCFString，初始计数值为1
+     stringWithString+__NSTaggedPointerString对象得到__NSCFString，初始计数值为1
+     stringWithString+__NSCFString对象得到__NSCFString，初始计数值为2
+     */
+    
     //场景1
-    NSString *string = [NSString stringWithFormat:@"jackonewang"];
-    string_weak = string;
-    NSLog(@"%@==",string_weak);
+//    NSString *string = [NSString stringWithFormat:@"jackonewang"];
+//    string_weak = string;
+//    NSLog(@"%@==",string_weak);
 
     //场景2
 //    @autoreleasepool{
@@ -43,12 +73,12 @@ __weak NSString *string_weak = nil;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    NSLog(@"%s----%@",__func__,string_weak);
+//    NSLog(@"%s----%@",__func__,string_weak);
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    NSLog(@"%s----%@",__func__,string_weak);
+//    NSLog(@"%s----%@",__func__,string_weak);
 }
 
 /**
