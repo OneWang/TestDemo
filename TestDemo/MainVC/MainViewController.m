@@ -17,6 +17,7 @@
 #import "HeightLevelCornerViewController.h"
 #import "TestImageCellViewController.h"
 #import "MultiThreadsViewController.h"
+#import "MultiImageDownloadCacheViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -61,6 +62,9 @@
     
     MainModel *model8 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([MultiThreadsViewController class]),@"destationVC":[MultiThreadsViewController class]}];
     [self.dataArray addObject:model8];
+    
+    MainModel *model9 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([MultiImageDownloadCacheViewController class]),@"destationVC":[MultiImageDownloadCacheViewController class]}];
+    [self.dataArray addObject:model9];
 }
 
 - (void)createChildViews{
