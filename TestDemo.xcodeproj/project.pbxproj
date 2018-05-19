@@ -235,6 +235,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				049CE1F720B01EA20036BB89 /* OCAndJSInteraction */,
 				0431510820AEA6050061474E /* MultiImageDownloadCache */,
 				043FA85A20A98250004274B5 /* TestCellImage */,
 				04F72A472092C46D00BF9395 /* RunLoop */,
@@ -339,6 +340,13 @@
 				0455882D2079CD200052D9B8 /* Stuff.m */,
 			);
 			path = "KVO、KVC实现原理";
+			sourceTree = "<group>";
+		};
+		049CE1F720B01EA20036BB89 /* OCAndJSInteraction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OCAndJSInteraction;
 			sourceTree = "<group>";
 		};
 		04A6D35A206CF229005A531B /* NeedTableview */ = {
