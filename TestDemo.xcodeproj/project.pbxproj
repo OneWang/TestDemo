@@ -29,6 +29,10 @@
 		045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045158882011D2F7001E37C8 /* UIView+ClipView.m */; };
 		045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */; };
 		0455882E2079CD200052D9B8 /* Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455882D2079CD200052D9B8 /* Stuff.m */; };
+		049CE1FA20B1C10D0036BB89 /* OCAndJSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */; };
+		049CE1FD20B1C13D0036BB89 /* js_call_oc.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FB20B1C13D0036BB89 /* js_call_oc.html */; };
+		049CE1FE20B1C13D0036BB89 /* oc_call_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FC20B1C13D0036BB89 /* oc_call_js.html */; };
+		049CE20120B1C1760036BB89 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CE20020B1C1760036BB89 /* WebViewController.m */; };
 		04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67A20186D78000F6370 /* AssetViewController.m */; };
 		04A4E67E20186EDD000F6370 /* AssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67D20186EDD000F6370 /* AssetCell.m */; };
 		04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E6802018A34F000F6370 /* AssetImageManager.m */; };
@@ -121,6 +125,12 @@
 		045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCKVOTheoryViewController.m; sourceTree = "<group>"; };
 		0455882C2079CD200052D9B8 /* Stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stuff.h; sourceTree = "<group>"; };
 		0455882D2079CD200052D9B8 /* Stuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stuff.m; sourceTree = "<group>"; };
+		049CE1F820B1C10D0036BB89 /* OCAndJSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAndJSInteractionViewController.h; sourceTree = "<group>"; };
+		049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAndJSInteractionViewController.m; sourceTree = "<group>"; };
+		049CE1FB20B1C13D0036BB89 /* js_call_oc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = js_call_oc.html; sourceTree = "<group>"; };
+		049CE1FC20B1C13D0036BB89 /* oc_call_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = oc_call_js.html; sourceTree = "<group>"; };
+		049CE1FF20B1C1760036BB89 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		049CE20020B1C1760036BB89 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		04A4E67920186D78000F6370 /* AssetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetViewController.h; sourceTree = "<group>"; };
 		04A4E67A20186D78000F6370 /* AssetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetViewController.m; sourceTree = "<group>"; };
 		04A4E67C20186EDD000F6370 /* AssetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCell.h; sourceTree = "<group>"; };
@@ -345,6 +355,12 @@
 		049CE1F720B01EA20036BB89 /* OCAndJSInteraction */ = {
 			isa = PBXGroup;
 			children = (
+				049CE1FB20B1C13D0036BB89 /* js_call_oc.html */,
+				049CE1FC20B1C13D0036BB89 /* oc_call_js.html */,
+				049CE1F820B1C10D0036BB89 /* OCAndJSInteractionViewController.h */,
+				049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */,
+				049CE1FF20B1C1760036BB89 /* WebViewController.h */,
+				049CE20020B1C1760036BB89 /* WebViewController.m */,
 			);
 			path = OCAndJSInteraction;
 			sourceTree = "<group>";
@@ -631,6 +647,8 @@
 				043FA86220A984B7004274B5 /* 1.plist in Resources */,
 				042E81D1200D933700AB47AB /* Assets.xcassets in Resources */,
 				0431511920AEAAB10061474E /* appsInfo.plist in Resources */,
+				049CE1FE20B1C13D0036BB89 /* oc_call_js.html in Resources */,
+				049CE1FD20B1C13D0036BB89 /* js_call_oc.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,12 +743,14 @@
 				04A4E67E20186EDD000F6370 /* AssetCell.m in Sources */,
 				04C55B3E20650B6400571715 /* Father+category.m in Sources */,
 				04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */,
+				049CE20120B1C1760036BB89 /* WebViewController.m in Sources */,
 				04489E60206E420E00F9300A /* BreakPointDownLoad.m in Sources */,
 				04B92FE0206A28B200FECA45 /* SortAlgorithm.m in Sources */,
 				04E0EC2A207CA77D00D38A5D /* TouchViewController.m in Sources */,
 				042E81CC200D933700AB47AB /* PhotoViewController.m in Sources */,
 				042E81D7200D933700AB47AB /* main.m in Sources */,
 				042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */,
+				049CE1FA20B1C10D0036BB89 /* OCAndJSInteractionViewController.m in Sources */,
 				04C55B4120650C6800571715 /* Son+category.m in Sources */,
 				04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */,
 				04A4E6872019C3B6000F6370 /* PreviewViewController.m in Sources */,
