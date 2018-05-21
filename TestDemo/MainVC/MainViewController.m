@@ -18,6 +18,7 @@
 #import "TestImageCellViewController.h"
 #import "MultiThreadsViewController.h"
 #import "MultiImageDownloadCacheViewController.h"
+#import "OCAndJSInteractionViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -65,6 +66,9 @@
     
     MainModel *model9 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([MultiImageDownloadCacheViewController class]),@"destationVC":[MultiImageDownloadCacheViewController class]}];
     [self.dataArray addObject:model9];
+    
+    MainModel *model10 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([OCAndJSInteractionViewController class]),@"destationVC":[OCAndJSInteractionViewController class]}];
+    [self.dataArray addObject:model10];
 }
 
 - (void)createChildViews{

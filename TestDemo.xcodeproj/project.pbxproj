@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C5CF20565F9D00C91098 /* UIImage+ClipVIew.m */; };
 		040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C940F209C747D00A40C22 /* UIImage+CutImage.m */; };
+		04109B5F20B2D4EB007C37CF /* OCCallJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04109B5E20B2D4EB007C37CF /* OCCallJSViewController.m */; };
+		04109B6220B2D4F5007C37CF /* JSCallOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04109B6120B2D4F5007C37CF /* JSCallOCViewController.m */; };
 		042C1766201EC7EB006D1539 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C1765201EC7EB006D1539 /* ItemCell.m */; };
 		042E81C9200D933700AB47AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81C8200D933700AB47AB /* AppDelegate.m */; };
 		042E81CC200D933700AB47AB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81CB200D933700AB47AB /* PhotoViewController.m */; };
@@ -86,6 +88,10 @@
 		0406C5CF20565F9D00C91098 /* UIImage+ClipVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ClipVIew.m"; sourceTree = "<group>"; };
 		040C940E209C747D00A40C22 /* UIImage+CutImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CutImage.h"; sourceTree = "<group>"; };
 		040C940F209C747D00A40C22 /* UIImage+CutImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CutImage.m"; sourceTree = "<group>"; };
+		04109B5D20B2D4EB007C37CF /* OCCallJSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCCallJSViewController.h; sourceTree = "<group>"; };
+		04109B5E20B2D4EB007C37CF /* OCCallJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCCallJSViewController.m; sourceTree = "<group>"; };
+		04109B6020B2D4F5007C37CF /* JSCallOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSCallOCViewController.h; sourceTree = "<group>"; };
+		04109B6120B2D4F5007C37CF /* JSCallOCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCallOCViewController.m; sourceTree = "<group>"; };
 		042C1764201EC7EB006D1539 /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		042C1765201EC7EB006D1539 /* ItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		042E81C4200D933700AB47AB /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -361,6 +367,10 @@
 				049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */,
 				049CE1FF20B1C1760036BB89 /* WebViewController.h */,
 				049CE20020B1C1760036BB89 /* WebViewController.m */,
+				04109B5D20B2D4EB007C37CF /* OCCallJSViewController.h */,
+				04109B5E20B2D4EB007C37CF /* OCCallJSViewController.m */,
+				04109B6020B2D4F5007C37CF /* JSCallOCViewController.h */,
+				04109B6120B2D4F5007C37CF /* JSCallOCViewController.m */,
 			);
 			path = OCAndJSInteraction;
 			sourceTree = "<group>";
@@ -752,6 +762,8 @@
 				042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */,
 				049CE1FA20B1C10D0036BB89 /* OCAndJSInteractionViewController.m in Sources */,
 				04C55B4120650C6800571715 /* Son+category.m in Sources */,
+				04109B5F20B2D4EB007C37CF /* OCCallJSViewController.m in Sources */,
+				04109B6220B2D4F5007C37CF /* JSCallOCViewController.m in Sources */,
 				04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */,
 				04A4E6872019C3B6000F6370 /* PreviewViewController.m in Sources */,
 				04C9FCBD2078F84A00EE8DB6 /* ARCAndMRCViewController.m in Sources */,
