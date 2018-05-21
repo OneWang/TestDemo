@@ -10,5 +10,5 @@
 
 @interface EXLNeededTabeleView : UITableView
 /** 数据源数组 */
-@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) NSArray *dataArray;
 @end

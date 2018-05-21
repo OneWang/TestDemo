@@ -35,6 +35,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
+    cell.textLabel.text = [NSString stringWithFormat:@"撒打算%zd",indexPath.row];
     return cell;
 }
 
@@ -53,20 +54,21 @@
         if (velocity.y < 0) {
             NSIndexPath *indexPath = [temp lastObject];
             if (indexPath.row + 3 < self.dataArray.count) {
-                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]];
-                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row+2 inSection:0]];
-                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row+3 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row + 2 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row + 3 inSection:0]];
             }
         }else{
             NSIndexPath *indexPath = [temp firstObject];
-            if (indexPath.row>3) {
-                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-3 inSection:0]];
-                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-2 inSection:0]];
-                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-1 inSection:0]];
+            if (indexPath.row > 3) {
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row - 3 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row - 2 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row - 1 inSection:0]];
             }
         }
         [self.needLoadArray addObjectsFromArray:arr];
     }
+    NSLog(@"需要加载的cell数组：%@---%f",self.needLoadArray,velocity.y);
 }
 
 - (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView{
@@ -91,13 +93,6 @@
 }
 
 #pragma mark - setter and getter
-- (NSMutableArray *)dataArray{
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray array];
-    }
-    return _dataArray;
-}
-
 - (NSMutableArray *)needLoadArray{
     if (!_needLoadArray) {
         _needLoadArray = [NSMutableArray array];

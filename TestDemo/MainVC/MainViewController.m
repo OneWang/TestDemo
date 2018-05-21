@@ -19,6 +19,7 @@
 #import "MultiThreadsViewController.h"
 #import "MultiImageDownloadCacheViewController.h"
 #import "OCAndJSInteractionViewController.h"
+#import "NeedTabelViewViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -69,6 +70,9 @@
     
     MainModel *model10 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([OCAndJSInteractionViewController class]),@"destationVC":[OCAndJSInteractionViewController class]}];
     [self.dataArray addObject:model10];
+    
+    MainModel *model11 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([NeedTabelViewViewController class]),@"destationVC":[NeedTabelViewViewController class]}];
+    [self.dataArray addObject:model11];
 }
 
 - (void)createChildViews{

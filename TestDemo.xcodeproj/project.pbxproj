@@ -11,6 +11,8 @@
 		040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C940F209C747D00A40C22 /* UIImage+CutImage.m */; };
 		04109B5F20B2D4EB007C37CF /* OCCallJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04109B5E20B2D4EB007C37CF /* OCCallJSViewController.m */; };
 		04109B6220B2D4F5007C37CF /* JSCallOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04109B6120B2D4F5007C37CF /* JSCallOCViewController.m */; };
+		04109B6520B2DA79007C37CF /* NeedTabelViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04109B6420B2DA79007C37CF /* NeedTabelViewViewController.m */; };
+		04109B6820B2DDA4007C37CF /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04109B6720B2DDA4007C37CF /* YYFPSLabel.m */; };
 		042C1766201EC7EB006D1539 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C1765201EC7EB006D1539 /* ItemCell.m */; };
 		042E81C9200D933700AB47AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81C8200D933700AB47AB /* AppDelegate.m */; };
 		042E81CC200D933700AB47AB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E81CB200D933700AB47AB /* PhotoViewController.m */; };
@@ -92,6 +94,10 @@
 		04109B5E20B2D4EB007C37CF /* OCCallJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCCallJSViewController.m; sourceTree = "<group>"; };
 		04109B6020B2D4F5007C37CF /* JSCallOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSCallOCViewController.h; sourceTree = "<group>"; };
 		04109B6120B2D4F5007C37CF /* JSCallOCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCallOCViewController.m; sourceTree = "<group>"; };
+		04109B6320B2DA79007C37CF /* NeedTabelViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeedTabelViewViewController.h; sourceTree = "<group>"; };
+		04109B6420B2DA79007C37CF /* NeedTabelViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeedTabelViewViewController.m; sourceTree = "<group>"; };
+		04109B6620B2DDA4007C37CF /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		04109B6720B2DDA4007C37CF /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		042C1764201EC7EB006D1539 /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		042C1765201EC7EB006D1539 /* ItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		042E81C4200D933700AB47AB /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,8 +384,12 @@
 		04A6D35A206CF229005A531B /* NeedTableview */ = {
 			isa = PBXGroup;
 			children = (
+				04109B6620B2DDA4007C37CF /* YYFPSLabel.h */,
+				04109B6720B2DDA4007C37CF /* YYFPSLabel.m */,
 				04A6D358206CF221005A531B /* EXLNeededTabeleView.h */,
 				04A6D357206CF221005A531B /* EXLNeededTabeleView.m */,
+				04109B6320B2DA79007C37CF /* NeedTabelViewViewController.h */,
+				04109B6420B2DA79007C37CF /* NeedTabelViewViewController.m */,
 			);
 			path = NeedTableview;
 			sourceTree = "<group>";
@@ -740,6 +750,7 @@
 				0431511E20AEAC360061474E /* MultiImageDownloadCacheViewController.m in Sources */,
 				04C55B272064EDB700571715 /* Monkey.m in Sources */,
 				0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */,
+				04109B6820B2DDA4007C37CF /* YYFPSLabel.m in Sources */,
 				04C00D712078D745000EA706 /* BlockAndPointer.m in Sources */,
 				04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */,
 				04C55B3B20650A9300571715 /* Son.m in Sources */,
@@ -773,6 +784,7 @@
 				04C9FCC52078F9A900EE8DB6 /* MainViewController.m in Sources */,
 				04C55B242064ED9900571715 /* Bird.m in Sources */,
 				04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */,
+				04109B6520B2DA79007C37CF /* NeedTabelViewViewController.m in Sources */,
 				04C00D742078E1EE000EA706 /* BlockAndPointerViewController.m in Sources */,
 				04C55B382065096800571715 /* Father.m in Sources */,
 				04C9FCC82078FACD00EE8DB6 /* MainModel.m in Sources */,
