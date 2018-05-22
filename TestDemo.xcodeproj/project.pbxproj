@@ -29,6 +29,8 @@
 		043FA86020A98346004274B5 /* TestImageCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FA85F20A98346004274B5 /* TestImageCellViewController.m */; };
 		043FA86220A984B7004274B5 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043FA86120A984B7004274B5 /* 1.plist */; };
 		043FA86520A9853B004274B5 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FA86420A9853B004274B5 /* ImageModel.m */; };
+		0447BD6320B4525200C59C9E /* CopyAndMutableCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0447BD6220B4525200C59C9E /* CopyAndMutableCopyViewController.m */; };
+		0447BD6620B4526B00C59C9E /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0447BD6520B4526B00C59C9E /* Dog.m */; };
 		04489E60206E420E00F9300A /* BreakPointDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 04489E5F206E420E00F9300A /* BreakPointDownLoad.m */; };
 		045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045158882011D2F7001E37C8 /* UIView+ClipView.m */; };
 		045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */; };
@@ -129,6 +131,10 @@
 		043FA86120A984B7004274B5 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
 		043FA86320A9853B004274B5 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		043FA86420A9853B004274B5 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		0447BD6120B4525200C59C9E /* CopyAndMutableCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyAndMutableCopyViewController.h; sourceTree = "<group>"; };
+		0447BD6220B4525200C59C9E /* CopyAndMutableCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyAndMutableCopyViewController.m; sourceTree = "<group>"; };
+		0447BD6420B4526B00C59C9E /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		0447BD6520B4526B00C59C9E /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		04489E5E206E420E00F9300A /* BreakPointDownLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreakPointDownLoad.h; sourceTree = "<group>"; };
 		04489E5F206E420E00F9300A /* BreakPointDownLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakPointDownLoad.m; sourceTree = "<group>"; };
 		045158872011D2F7001E37C8 /* UIView+ClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ClipView.h"; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0447BD6020B4522E00C59C9E /* CopyAndMutableCopy */,
 				049CE1F720B01EA20036BB89 /* OCAndJSInteraction */,
 				0431510820AEA6050061474E /* MultiImageDownloadCache */,
 				043FA85A20A98250004274B5 /* TestCellImage */,
@@ -342,6 +349,17 @@
 				043FA86420A9853B004274B5 /* ImageModel.m */,
 			);
 			path = TestCellImage;
+			sourceTree = "<group>";
+		};
+		0447BD6020B4522E00C59C9E /* CopyAndMutableCopy */ = {
+			isa = PBXGroup;
+			children = (
+				0447BD6120B4525200C59C9E /* CopyAndMutableCopyViewController.h */,
+				0447BD6220B4525200C59C9E /* CopyAndMutableCopyViewController.m */,
+				0447BD6420B4526B00C59C9E /* Dog.h */,
+				0447BD6520B4526B00C59C9E /* Dog.m */,
+			);
+			path = CopyAndMutableCopy;
 			sourceTree = "<group>";
 		};
 		04489E5D206E406400F9300A /* BreakPointDownLoad */ = {
@@ -758,8 +776,10 @@
 				043FA86520A9853B004274B5 /* ImageModel.m in Sources */,
 				04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */,
 				040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */,
+				0447BD6620B4526B00C59C9E /* Dog.m in Sources */,
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
 				04A4E68420196C63000F6370 /* AssetModel.m in Sources */,
+				0447BD6320B4525200C59C9E /* CopyAndMutableCopyViewController.m in Sources */,
 				04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */,
 				04A4E67E20186EDD000F6370 /* AssetCell.m in Sources */,
 				04C55B3E20650B6400571715 /* Father+category.m in Sources */,

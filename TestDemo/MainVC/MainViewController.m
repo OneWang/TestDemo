@@ -20,6 +20,7 @@
 #import "MultiImageDownloadCacheViewController.h"
 #import "OCAndJSInteractionViewController.h"
 #import "NeedTabelViewViewController.h"
+#import "CopyAndMutableCopyViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -73,6 +74,9 @@
     
     MainModel *model11 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([NeedTabelViewViewController class]),@"destationVC":[NeedTabelViewViewController class]}];
     [self.dataArray addObject:model11];
+    
+    MainModel *model12 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([CopyAndMutableCopyViewController class]),@"destationVC":[CopyAndMutableCopyViewController class]}];
+    [self.dataArray addObject:model12];
 }
 
 - (void)createChildViews{
