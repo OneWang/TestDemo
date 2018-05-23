@@ -12,7 +12,8 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-
+        int array[] = {2,4,5,12,16,23,45};
+        NSLog(@"%d",binary_search(array, sizeof(array) / sizeof(int), 5));
     }
     return self;
 }
@@ -37,6 +38,23 @@
         }
     }
     NSLog(@"%@",array);
+}
+
+//二分查找:（1）必须采用顺序存储结构 （2）.必须按关键字大小有序排列
+int binary_search(int *a, int len, int goal) {
+    int low = 0;
+    int high = len - 1;
+    while (low <= high) {
+        int middle = (high - low) / 2 + low;
+        if (a[middle] == goal) {
+            return middle;
+        }else if (a[middle] > goal) {
+            high = middle - 1;
+        }else {
+            low = middle + 1;
+        }
+    }
+    return -1;
 }
 
 /**
@@ -164,7 +182,6 @@ void quickSort(NSMutableArray *arr, int L, int R) {
     
     //合并数组
     [self mergerArray:dataArray left:left middle:middle + 1 right:right];
-    
     NSLog(@"归并：%@",dataArray);
 }
 
@@ -217,5 +234,51 @@ void quickSort(NSMutableArray *arr, int L, int R) {
         k ++;
     }
 }
+
+/** 递归：方法自己调用自己（循环调用）；循环可改写成递归，但是递归不一定能改写成循环；
+    想要使用递归必须满足的条件：1.递归出口（终止递归的条件）2.递归表达式（规律）。
+ */
+
+//使用递归求数组中的最大值
+int findMaxValueInArray(NSArray *array, int L, int R){
+    if (L == R) {
+        return [array[L] intValue];
+    }else{
+        int left = [array[L] intValue];
+        int right = findMaxValueInArray(array,L + 1, R);
+        if (left > right) {
+            return left;
+        }else{
+            return right;
+        }
+    }
+}
+
+//使用递归完场冒泡排序，理论和👆一样
+void bubbleSort(NSMutableArray *array,int left,int right){
+    if (left == right) return;
+    int temp;
+    for (int i = left; i < right; i ++) {
+        if (array[i] > array[i + 1]) {
+            temp = [array[i] intValue];
+            array[i] = array[i + 1];
+            array[i + 1] = @(temp);
+        }
+    }
+    bubbleSort(array, left, right - 1);
+}
+
+//斐波那契数列
+int fibbonacci(int n){
+    if (n == 1) {
+        return 1;
+    }else if (n == 2){
+        return 1;
+    }else{
+        return fibbonacci(n - 1) + fibbonacci(n - 2);
+    }
+}
+
+
 
 @end
