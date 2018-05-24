@@ -39,6 +39,8 @@
 		049CE1FD20B1C13D0036BB89 /* js_call_oc.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FB20B1C13D0036BB89 /* js_call_oc.html */; };
 		049CE1FE20B1C13D0036BB89 /* oc_call_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FC20B1C13D0036BB89 /* oc_call_js.html */; };
 		049CE20120B1C1760036BB89 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CE20020B1C1760036BB89 /* WebViewController.m */; };
+		04A2D44220B6CBBB0058D484 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2D44120B6CBBB0058D484 /* AutoLayoutViewController.m */; };
+		04A2D44420B6CF640058D484 /* AutoLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A2D44320B6CF640058D484 /* AutoLayoutViewController.storyboard */; };
 		04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67A20186D78000F6370 /* AssetViewController.m */; };
 		04A4E67E20186EDD000F6370 /* AssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67D20186EDD000F6370 /* AssetCell.m */; };
 		04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E6802018A34F000F6370 /* AssetImageManager.m */; };
@@ -149,6 +151,9 @@
 		049CE1FC20B1C13D0036BB89 /* oc_call_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = oc_call_js.html; sourceTree = "<group>"; };
 		049CE1FF20B1C1760036BB89 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		049CE20020B1C1760036BB89 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		04A2D44020B6CBBB0058D484 /* AutoLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
+		04A2D44120B6CBBB0058D484 /* AutoLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
+		04A2D44320B6CF640058D484 /* AutoLayoutViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayoutViewController.storyboard; sourceTree = "<group>"; };
 		04A4E67920186D78000F6370 /* AssetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetViewController.h; sourceTree = "<group>"; };
 		04A4E67A20186D78000F6370 /* AssetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetViewController.m; sourceTree = "<group>"; };
 		04A4E67C20186EDD000F6370 /* AssetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCell.h; sourceTree = "<group>"; };
@@ -263,6 +268,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04A2D43F20B6CBA60058D484 /* AutoLayout */,
 				0447BD6020B4522E00C59C9E /* CopyAndMutableCopy */,
 				049CE1F720B01EA20036BB89 /* OCAndJSInteraction */,
 				0431510820AEA6050061474E /* MultiImageDownloadCache */,
@@ -397,6 +403,16 @@
 				04109B6120B2D4F5007C37CF /* JSCallOCViewController.m */,
 			);
 			path = OCAndJSInteraction;
+			sourceTree = "<group>";
+		};
+		04A2D43F20B6CBA60058D484 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				04A2D44020B6CBBB0058D484 /* AutoLayoutViewController.h */,
+				04A2D44120B6CBBB0058D484 /* AutoLayoutViewController.m */,
+				04A2D44320B6CF640058D484 /* AutoLayoutViewController.storyboard */,
+			);
+			path = AutoLayout;
 			sourceTree = "<group>";
 		};
 		04A6D35A206CF229005A531B /* NeedTableview */ = {
@@ -687,6 +703,7 @@
 				0431511920AEAAB10061474E /* appsInfo.plist in Resources */,
 				049CE1FE20B1C13D0036BB89 /* oc_call_js.html in Resources */,
 				049CE1FD20B1C13D0036BB89 /* js_call_oc.html in Resources */,
+				04A2D44420B6CF640058D484 /* AutoLayoutViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,6 +819,7 @@
 				04C55B212064E85A00571715 /* Person.m in Sources */,
 				04E0EC30207CAC9E00D38A5D /* SubView.m in Sources */,
 				04C9FCC52078F9A900EE8DB6 /* MainViewController.m in Sources */,
+				04A2D44220B6CBBB0058D484 /* AutoLayoutViewController.m in Sources */,
 				04C55B242064ED9900571715 /* Bird.m in Sources */,
 				04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */,
 				04109B6520B2DA79007C37CF /* NeedTabelViewViewController.m in Sources */,

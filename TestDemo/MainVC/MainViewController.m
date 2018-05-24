@@ -22,6 +22,7 @@
 #import "NeedTabelViewViewController.h"
 #import "CopyAndMutableCopyViewController.h"
 #import "SortAlgorithmViewController.h"
+#import "AutoLayoutViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -81,6 +82,9 @@
     
     MainModel *model13 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([SortAlgorithmViewController class]),@"destationVC":[SortAlgorithmViewController class]}];
     [self.dataArray addObject:model13];
+    
+    MainModel *model14 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([AutoLayoutViewController class]),@"destationVC":[AutoLayoutViewController class]}];
+    [self.dataArray addObject:model14];
 }
 
 - (void)createChildViews{
