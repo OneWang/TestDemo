@@ -166,6 +166,23 @@ void quickSort(NSMutableArray *arr, int L, int R) {
     NSLog(@"函数%@",arr);
 }
 
+//一个数整数次幂
+double Power(double base, int exponent) {
+    if (exponent == 0)
+        return 1;
+    if (exponent == 1)
+        return base;
+    Boolean isNegative = false;
+    if (exponent < 0) {
+        exponent = -exponent;
+        isNegative = true;
+    }
+    double pow = Power(base * base, exponent / 2);
+    if (exponent % 2 != 0)
+        pow = pow * base;
+    return isNegative ? 1 / pow : pow;
+}
+
 /**
  归并排序
  将两个已排好序的数组合并成一个有序的数组；
