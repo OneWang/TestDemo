@@ -189,7 +189,6 @@ double Power(double base, int exponent) {
  1.将元素分割开来，看成是有序的数组，进行比较合并；
  2.不断拆分和合并，知道只有一个元素；
  */
-
 - (void)mergerSort:(NSMutableArray *)dataArray leftIndex:(NSInteger)left rightIndex:(NSInteger)right{
     if (left == right) return;  //如果左边索引和右边索引相等，就说明数组中只有一个数
     NSInteger middle = (left + right) / 2;  //分割中间值
@@ -204,7 +203,6 @@ double Power(double base, int exponent) {
 
 /**
  合并数组
-
  @param dataArray 需要合并的数组
  @param left 数组左边的索引
  @param middle 数组中间的分割索引
@@ -255,7 +253,6 @@ double Power(double base, int exponent) {
 /** 递归：方法自己调用自己（循环调用）；循环可改写成递归，但是递归不一定能改写成循环；
     想要使用递归必须满足的条件：1.递归出口（终止递归的条件）2.递归表达式（规律）。
  */
-
 //使用递归求数组中的最大值
 int findMaxValueInArray(NSArray *array, int L, int R){
     if (L == R) {
