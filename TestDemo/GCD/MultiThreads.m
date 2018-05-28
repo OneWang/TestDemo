@@ -10,6 +10,13 @@
 
 @implementation MultiThreads
 
+- (instancetype)init{
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
 - (void)testGCD{
     //并发队列同步派发任务
     dispatch_queue_t my_queue2 = dispatch_queue_create("my_queue", DISPATCH_QUEUE_CONCURRENT);

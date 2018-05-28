@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface MultiThreads : NSObject
-
+- (void)testGCDSemaphore;
 @end

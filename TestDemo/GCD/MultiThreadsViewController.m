@@ -7,6 +7,7 @@
 //
 
 #import "MultiThreadsViewController.h"
+#import "MultiThreads.h"
 
 @interface MultiThreadsViewController ()
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
         
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"1");
@@ -24,6 +27,9 @@
         });
         NSLog(@"3");
     });
+    
+    [[MultiThreads new] testGCDSemaphore];
+    
 }
 
 @end
