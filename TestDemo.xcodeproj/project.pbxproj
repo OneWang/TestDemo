@@ -67,6 +67,8 @@
 		04E0EC2A207CA77D00D38A5D /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC29207CA77D00D38A5D /* TouchViewController.m */; };
 		04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2C207CA87300D38A5D /* CustomView.m */; };
 		04E0EC30207CAC9E00D38A5D /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2F207CAC9E00D38A5D /* SubView.m */; };
+		04F13E1D20BE7FEB0016AD48 /* NSObject+Sark.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F13E1C20BE7FEB0016AD48 /* NSObject+Sark.m */; };
+		04F13E2020BE80290016AD48 /* RunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F13E1F20BE80290016AD48 /* RunTimeViewController.m */; };
 		04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */; };
 		04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72A492092C47E00BF9395 /* RunloopViewController.m */; };
 		309A92F81F799A3E0A0E52CF /* libPods-TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */; };
@@ -207,6 +209,10 @@
 		04E0EC2C207CA87300D38A5D /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		04E0EC2E207CAC9E00D38A5D /* SubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubView.h; sourceTree = "<group>"; };
 		04E0EC2F207CAC9E00D38A5D /* SubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubView.m; sourceTree = "<group>"; };
+		04F13E1B20BE7FEB0016AD48 /* NSObject+Sark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sark.h"; sourceTree = "<group>"; };
+		04F13E1C20BE7FEB0016AD48 /* NSObject+Sark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sark.m"; sourceTree = "<group>"; };
+		04F13E1E20BE80290016AD48 /* RunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeViewController.h; sourceTree = "<group>"; };
+		04F13E1F20BE80290016AD48 /* RunTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeViewController.m; sourceTree = "<group>"; };
 		04F325402052DBCF00BB884B /* UIViewController+viewdidload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+viewdidload.h"; sourceTree = "<group>"; };
 		04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+viewdidload.m"; sourceTree = "<group>"; };
 		04F72A482092C47E00BF9395 /* RunloopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopViewController.h; sourceTree = "<group>"; };
@@ -459,6 +465,10 @@
 				04C55B232064ED9900571715 /* Bird.m */,
 				04C55B252064EDB700571715 /* Monkey.h */,
 				04C55B262064EDB700571715 /* Monkey.m */,
+				04F13E1B20BE7FEB0016AD48 /* NSObject+Sark.h */,
+				04F13E1C20BE7FEB0016AD48 /* NSObject+Sark.m */,
+				04F13E1E20BE80290016AD48 /* RunTimeViewController.h */,
+				04F13E1F20BE80290016AD48 /* RunTimeViewController.m */,
 			);
 			path = MessageForwarding;
 			sourceTree = "<group>";
@@ -791,10 +801,12 @@
 				04C55B3B20650A9300571715 /* Son.m in Sources */,
 				04C00D7A2078E21D000EA706 /* SortAlgorithmViewController.m in Sources */,
 				043FA86520A9853B004274B5 /* ImageModel.m in Sources */,
+				04F13E2020BE80290016AD48 /* RunTimeViewController.m in Sources */,
 				04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */,
 				040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */,
 				0447BD6620B4526B00C59C9E /* Dog.m in Sources */,
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
+				04F13E1D20BE7FEB0016AD48 /* NSObject+Sark.m in Sources */,
 				04A4E68420196C63000F6370 /* AssetModel.m in Sources */,
 				0447BD6320B4525200C59C9E /* CopyAndMutableCopyViewController.m in Sources */,
 				04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */,
