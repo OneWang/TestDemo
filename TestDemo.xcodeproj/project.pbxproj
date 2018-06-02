@@ -35,6 +35,7 @@
 		045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045158882011D2F7001E37C8 /* UIView+ClipView.m */; };
 		045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */; };
 		0455882E2079CD200052D9B8 /* Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455882D2079CD200052D9B8 /* Stuff.m */; };
+		048145B020C2A4B000DB5380 /* CoreFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048145AF20C2A4B000DB5380 /* CoreFoundationViewController.m */; };
 		049CE1FA20B1C10D0036BB89 /* OCAndJSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */; };
 		049CE1FD20B1C13D0036BB89 /* js_call_oc.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FB20B1C13D0036BB89 /* js_call_oc.html */; };
 		049CE1FE20B1C13D0036BB89 /* oc_call_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FC20B1C13D0036BB89 /* oc_call_js.html */; };
@@ -147,6 +148,8 @@
 		045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCKVOTheoryViewController.m; sourceTree = "<group>"; };
 		0455882C2079CD200052D9B8 /* Stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stuff.h; sourceTree = "<group>"; };
 		0455882D2079CD200052D9B8 /* Stuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stuff.m; sourceTree = "<group>"; };
+		048145AE20C2A4B000DB5380 /* CoreFoundationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreFoundationViewController.h; sourceTree = "<group>"; };
+		048145AF20C2A4B000DB5380 /* CoreFoundationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreFoundationViewController.m; sourceTree = "<group>"; };
 		049CE1F820B1C10D0036BB89 /* OCAndJSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAndJSInteractionViewController.h; sourceTree = "<group>"; };
 		049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAndJSInteractionViewController.m; sourceTree = "<group>"; };
 		049CE1FB20B1C13D0036BB89 /* js_call_oc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = js_call_oc.html; sourceTree = "<group>"; };
@@ -274,6 +277,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				048145AD20C2A49C00DB5380 /* CoreFoundation */,
 				04A2D43F20B6CBA60058D484 /* AutoLayout */,
 				0447BD6020B4522E00C59C9E /* CopyAndMutableCopy */,
 				049CE1F720B01EA20036BB89 /* OCAndJSInteraction */,
@@ -392,6 +396,15 @@
 				0455882D2079CD200052D9B8 /* Stuff.m */,
 			);
 			path = "KVO、KVC实现原理";
+			sourceTree = "<group>";
+		};
+		048145AD20C2A49C00DB5380 /* CoreFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				048145AE20C2A4B000DB5380 /* CoreFoundationViewController.h */,
+				048145AF20C2A4B000DB5380 /* CoreFoundationViewController.m */,
+			);
+			path = CoreFoundation;
 			sourceTree = "<group>";
 		};
 		049CE1F720B01EA20036BB89 /* OCAndJSInteraction */ = {
@@ -797,6 +810,7 @@
 				0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */,
 				04109B6820B2DDA4007C37CF /* YYFPSLabel.m in Sources */,
 				04C00D712078D745000EA706 /* BlockAndPointer.m in Sources */,
+				048145B020C2A4B000DB5380 /* CoreFoundationViewController.m in Sources */,
 				04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */,
 				04C55B3B20650A9300571715 /* Son.m in Sources */,
 				04C00D7A2078E21D000EA706 /* SortAlgorithmViewController.m in Sources */,

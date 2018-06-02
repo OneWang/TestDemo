@@ -14,15 +14,12 @@
 
 @implementation OCCallJSViewController
 
-- (void)loadNavItems
-{
+- (void)loadNavItems{
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"加1" style:UIBarButtonItemStyleDone target:self action:@selector(addOne)];
     self.navigationItem.title = @"OC调用JS代码";
-    
 }
 
-- (void)addOne
-{
+- (void)addOne{
     //获取context的引用，这里是获取到js代码里的addAction方法
     JSValue *addAction = self.context[@"addAction"];
     //在addAction方法里传入1

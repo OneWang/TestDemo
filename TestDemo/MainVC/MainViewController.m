@@ -23,6 +23,7 @@
 #import "CopyAndMutableCopyViewController.h"
 #import "SortAlgorithmViewController.h"
 #import "AutoLayoutViewController.h"
+#import "CoreFoundationViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -85,6 +86,10 @@
     
     MainModel *model14 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([AutoLayoutViewController class]),@"destationVC":[AutoLayoutViewController class]}];
     [self.dataArray addObject:model14];
+    
+    MainModel *model15 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([CoreFoundationViewController class]),@"destationVC":[CoreFoundationViewController class]}];
+    [self.dataArray addObject:model15];
+
 }
 
 - (void)createChildViews{
