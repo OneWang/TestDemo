@@ -20,6 +20,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //OC对象转C对象
     id array = [[NSMutableArray alloc] init];
     CFMutableArrayRef cfobject = CFBridgingRetain(array);
     CFShow(cfobject);
@@ -28,6 +29,7 @@
 }
 
 - (void)normalTest{
+    //C对象转OC对象的引用计数的变化
     CFMutableArrayRef cfobject = CFArrayCreateMutable(kCFAllocatorDefault, 0, NULL);
     printf("转换之前：%ld\n",CFGetRetainCount(cfobject));
     
@@ -39,6 +41,7 @@
 
 //内存泄漏
 - (void)test1{
+    //C对象转OC对象的错误写法
     CFMutableArrayRef cfobject = CFArrayCreateMutable(kCFAllocatorDefault, 0, NULL);
     printf("转换之前：%ld\n",CFGetRetainCount(cfobject));
     
