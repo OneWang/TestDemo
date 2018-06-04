@@ -36,6 +36,7 @@
 		045588282079C8200052D9B8 /* KVCKVOTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045588272079C8200052D9B8 /* KVCKVOTheoryViewController.m */; };
 		0455882E2079CD200052D9B8 /* Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455882D2079CD200052D9B8 /* Stuff.m */; };
 		048145B020C2A4B000DB5380 /* CoreFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048145AF20C2A4B000DB5380 /* CoreFoundationViewController.m */; };
+		0491827820C5178A0080788D /* AlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491827720C5178A0080788D /* AlgorithmViewController.m */; };
 		049CE1FA20B1C10D0036BB89 /* OCAndJSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */; };
 		049CE1FD20B1C13D0036BB89 /* js_call_oc.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FB20B1C13D0036BB89 /* js_call_oc.html */; };
 		049CE1FE20B1C13D0036BB89 /* oc_call_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 049CE1FC20B1C13D0036BB89 /* oc_call_js.html */; };
@@ -150,6 +151,8 @@
 		0455882D2079CD200052D9B8 /* Stuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stuff.m; sourceTree = "<group>"; };
 		048145AE20C2A4B000DB5380 /* CoreFoundationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreFoundationViewController.h; sourceTree = "<group>"; };
 		048145AF20C2A4B000DB5380 /* CoreFoundationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreFoundationViewController.m; sourceTree = "<group>"; };
+		0491827620C5178A0080788D /* AlgorithmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmViewController.h; sourceTree = "<group>"; };
+		0491827720C5178A0080788D /* AlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmViewController.m; sourceTree = "<group>"; };
 		049CE1F820B1C10D0036BB89 /* OCAndJSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAndJSInteractionViewController.h; sourceTree = "<group>"; };
 		049CE1F920B1C10D0036BB89 /* OCAndJSInteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAndJSInteractionViewController.m; sourceTree = "<group>"; };
 		049CE1FB20B1C13D0036BB89 /* js_call_oc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = js_call_oc.html; sourceTree = "<group>"; };
@@ -277,6 +280,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0491827520C517540080788D /* Algorithm */,
 				048145AD20C2A49C00DB5380 /* CoreFoundation */,
 				04A2D43F20B6CBA60058D484 /* AutoLayout */,
 				0447BD6020B4522E00C59C9E /* CopyAndMutableCopy */,
@@ -405,6 +409,15 @@
 				048145AF20C2A4B000DB5380 /* CoreFoundationViewController.m */,
 			);
 			path = CoreFoundation;
+			sourceTree = "<group>";
+		};
+		0491827520C517540080788D /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				0491827620C5178A0080788D /* AlgorithmViewController.h */,
+				0491827720C5178A0080788D /* AlgorithmViewController.m */,
+			);
+			path = Algorithm;
 			sourceTree = "<group>";
 		};
 		049CE1F720B01EA20036BB89 /* OCAndJSInteraction */ = {
@@ -848,6 +861,7 @@
 				04A2D44220B6CBBB0058D484 /* AutoLayoutViewController.m in Sources */,
 				04C55B242064ED9900571715 /* Bird.m in Sources */,
 				04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */,
+				0491827820C5178A0080788D /* AlgorithmViewController.m in Sources */,
 				04109B6520B2DA79007C37CF /* NeedTabelViewViewController.m in Sources */,
 				04C00D742078E1EE000EA706 /* BlockAndPointerViewController.m in Sources */,
 				04C55B382065096800571715 /* Father.m in Sources */,
