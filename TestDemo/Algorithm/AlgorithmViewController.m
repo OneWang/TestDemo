@@ -19,7 +19,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSLog(@"%@",[self twoSum:@[@12,@3,@7,@16] target:14]);
+    NSLog(@"%@",[self revertWithString:@"asdf"]);
 }
 
 //判断一个数是否为素数
@@ -80,6 +80,19 @@
     // 例如，当输入为 12321 时，在 while 循环的末尾我们可以得到 x = 12，revertedNumber = 123，
     // 由于处于中位的数字不影响回文（它总是与自己相等），所以我们可以简单地将其去除。
     return number == revertedNumber || number == revertedNumber / 10;
+}
+
+//算法逆序输出字符串
+- (NSString *)revertWithString:(NSString *)string{
+    if (string == nil || string.length == 0) {
+        return string;
+    }
+    if (string.length == 1) {
+        return string;
+    }else{
+        string = [self revertWithString:[string substringWithRange:NSMakeRange(1, string.length - 1)]];
+        return [NSString stringWithFormat:@"%@%@",string,[string substringToIndex:1]];
+    }
 }
 
 @end

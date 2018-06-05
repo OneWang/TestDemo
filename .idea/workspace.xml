@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c041c0-3027-4f4e-8ea9-3f413fca32d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/DownloadImage.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/DownloadImage.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/EXLDropDownMenu.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/EXLDropDownMenu.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/appsInfo.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jack.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jack.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDemo.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/TestDemo.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDemo.xcodeproj/xcuserdata/jack.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/TestDemo.xcodeproj/xcuserdata/jack.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDemo/Algorithm/AlgorithmViewController.m" afterPath="$PROJECT_DIR$/TestDemo/Algorithm/AlgorithmViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDemo/Config/AppDelegate.m" afterPath="$PROJECT_DIR$/TestDemo/Config/AppDelegate.m" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,24 +12,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_62918275-AE5B-4FA5-BDEC-934C139ABBB8" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_504C1C80-FE6A-407C-BADD-81D56EF72A66" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SortAlgorithm.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SortAlgorithm.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestDemo/SortAlgorithm/SortAlgorithm.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
+            <state relative-caret-position="-3312">
               <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EXLDropDownMenu.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/EXLDropDownMenu.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="906">
-              <caret line="94" column="43" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -141,11 +125,12 @@
       <workItem from="1522912869499" duration="33000" />
       <workItem from="1522912909352" duration="520000" />
       <workItem from="1526625108723" duration="122000" />
+      <workItem from="1528209272955" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="675000" />
+    <option name="totallyTimeSpent" value="691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="17" y="27" width="1418" height="865" extended-state="0" />
@@ -154,7 +139,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -164,6 +148,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -193,19 +178,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestDemo/SortAlgorithm/SortAlgorithm.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDemo/SortAlgorithm/SortAlgorithm.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3312">
           <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/EXLDropDownMenu.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="94" column="43" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDemo/MultiImageDownloadCache/EXLDropDownMenu.m" />
   </component>
 </project>
