@@ -20,6 +20,13 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     NSLog(@"%@",[self revertWithString:@"asdf"]);
+    char value[] = "abc";
+    char*result = (char*) malloc(sizeof(value));
+//    memset(result, 0, sizeof(result));
+    if(result != NULL){
+        reverse(value,result);
+        printf("after reverse: %s\n",result);
+    }
 }
 
 //判断一个数是否为素数
@@ -82,7 +89,7 @@
     return number == revertedNumber || number == revertedNumber / 10;
 }
 
-//算法逆序输出字符串
+//算法递归逆序输出字符串
 - (NSString *)revertWithString:(NSString *)string{
     if (string == nil || string.length == 0) {
         return string;
@@ -90,9 +97,20 @@
     if (string.length == 1) {
         return string;
     }else{
-        string = [self revertWithString:[string substringWithRange:NSMakeRange(1, string.length - 1)]];
-        return [NSString stringWithFormat:@"%@%@",string,[string substringToIndex:1]];
+        return [NSString stringWithFormat:@"%@%@",[self revertWithString:[string substringWithRange:NSMakeRange(1, string.length - 1)]],[string substringToIndex:1]];
     }
+}
+
+void reverse(char *value,char *result){
+    if(value == NULL){
+        return;
+    }
+    
+    if(*value == '\0'){
+        return;
+    }
+    reverse(value + 1,result);
+    strncat(result,value,1);
 }
 
 @end
