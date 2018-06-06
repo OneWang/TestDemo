@@ -10,7 +10,7 @@
 #import "AssetCell.h"
 #import "AssetImageManager.h"
 #import "AssetModel.h"
-
+#import <Photos/Photos.h>
 
 @interface AssetViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,AssetCellDelegate>
 
@@ -22,7 +22,8 @@
 @property (weak, nonatomic) UILabel *countLabel;
 /** 选中的图片数组 */
 @property (strong, nonatomic) NSMutableArray *selectArray;
-
+/** 初始化大小 */
+@property (assign, nonatomic) CGRect cellRect;
 @end
 
 @implementation AssetViewController
@@ -125,16 +126,27 @@
     if (self.assetArray.count) {
         [self.assetArray removeAllObjects];
     }
+    __weak typeof(self) weakSelf = self;
+    __block NSUInteger count = 0;
     [[AssetImageManager shardInstance] getPhotoLibraryOriginal:YES completion:^(AlbumModel *albumModel) {
         self.assetArray = [NSMutableArray arrayWithArray:albumModel.models];
+        [weakSelf.selectImages enumerateObjectsUsingBlock:^(AssetModel * _Nonnull preObj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [weakSelf.assetArray enumerateObjectsUsingBlock:^(AssetModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([preObj.asset isKindOfClass:[PHAsset class]]) {
+                    PHAsset *asset = (PHAsset *)preObj.asset;
+                    PHAsset *current = (PHAsset *)obj.asset;
+                    if ([asset.localIdentifier isEqualToString:current.localIdentifier]) {
+                        obj.selected = YES;
+                        count ++;
+                    }
+                }
+            }];
+        }];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
+            self.countLabel.text = [NSString stringWithFormat:@"%zd",count];
         });
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 - (void)dealloc{
@@ -153,7 +165,33 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-   
+    UIView *previewView = [[UIView alloc] init];
+    previewView.backgroundColor = [UIColor redColor];
+    AssetCell *cell = (AssetCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    CGRect rect = [cell convertRect:cell.bounds toView:self.view];
+    previewView.frame = rect;
+    self.cellRect = rect;
+    UIWindow *keywindow = [UIApplication sharedApplication].keyWindow;
+    [keywindow addSubview:previewView];
+    previewView.alpha = 0.f;
+    [UIView animateWithDuration:0.25f delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        previewView.alpha = 1.0;
+        previewView.frame = UIScreen.mainScreen.bounds;
+    } completion:^(BOOL finished) {
+        
+    }];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
+    [previewView addGestureRecognizer:tap];
+}
+
+- (void)dismiss:(UITapGestureRecognizer *)tap{
+    UIView *view = tap.view;
+    [UIView animateWithDuration:0.25f delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        view.alpha = 0;
+        view.frame = self.cellRect;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 #pragma mark - AssetCellDelegate

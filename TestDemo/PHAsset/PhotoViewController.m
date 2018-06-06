@@ -23,7 +23,7 @@
 /** collectionview */
 @property (weak, nonatomic) UICollectionView *collectionView;
 /** 照片数组 */
-@property (strong, nonatomic) NSMutableArray *photoArray;
+@property (strong, nonatomic) NSMutableArray<AssetModel *> *photoArray;
 
 @end
 
@@ -82,6 +82,7 @@
     collection.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
     collection.delegate = self;
     collection.dataSource = self;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:collection];
     [collection registerClass:[ItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
     self.collectionView = collection;
