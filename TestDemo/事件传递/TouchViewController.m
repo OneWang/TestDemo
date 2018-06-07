@@ -9,6 +9,10 @@
 #import "TouchViewController.h"
 #import "CustomView.h"
 #import "SubView.h"
+#import "Aview.h"
+#import "Bview.h"
+#import "Cview.h"
+#import "Dview.h"
 
 @interface TouchViewController ()
 
@@ -20,18 +24,22 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    CustomView *custom = [[CustomView alloc] initWithFrame:CGRectMake(0, 100, 200, 200)];
-    [self.view addSubview:custom];
-    custom.backgroundColor = [UIColor yellowColor];
     
-    RedView *red = [[RedView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
-    [custom addSubview:red];
-    red.userInteractionEnabled = NO;
+    Aview *red = [[Aview alloc] initWithFrame:CGRectMake(100, 100, 100, 300)];
+    [self.view addSubview:red];
     red.backgroundColor = [UIColor redColor];
     
-    BlueView *blue = [[BlueView alloc] initWithFrame:CGRectMake(0, 10, 50, 50)];
+    Bview *blue = [[Bview alloc] initWithFrame:CGRectMake(0, 30, 50, 50)];
     [red addSubview:blue];
     blue.backgroundColor = [UIColor blueColor];
+    
+    Cview *yellow = [[Cview alloc] initWithFrame:CGRectMake(0, 100, 50, 50)];
+    [red addSubview:yellow];
+    yellow.backgroundColor = [UIColor yellowColor];
+    
+    Dview *orange = [[Dview alloc] initWithFrame:CGRectMake(0, 20, 70, 70)];
+    [yellow addSubview:orange];
+    orange.backgroundColor = [UIColor orangeColor];
     /**
      总结：无论视图能不能处理事件，只要点击了视图就都会产生事件，关键在于该事件最终是由谁来处理！
      */

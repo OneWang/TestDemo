@@ -1,14 +1,13 @@
 //
-//  CustomView.h
+//  Bview.h
 //  TestDemo
 //
-//  Created by Jack on 2018/4/10.
+//  Created by Jack on 2018/6/7.
 //  Copyright © 2018年 Jack. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CustomView : UIView
+@interface Bview : UIView
 
 @end
-

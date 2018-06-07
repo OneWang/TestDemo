@@ -10,13 +10,17 @@
 
 @implementation CustomView
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"调用黄色的view");
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"触摸黄色的view");
+}
+
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+//    NSLog(@"触摸黄色的view%@",[super hitTest:point withEvent:event]);
+//    return [super hitTest:point withEvent:event];
 //}
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    NSLog(@"调用黄色的view");
-    return [super hitTest:point withEvent:event];
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+    return YES;
 }
 
 - (void)drawRect:(CGRect)rect{
@@ -29,26 +33,4 @@
     CGContextStrokePath(context);
 }
 
-@end
-
-@implementation RedView
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"触摸红色的view");
-//}
-
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    NSLog(@"触摸红色的view");
-    return [super hitTest:point withEvent:event];
-}
-@end
-
-@implementation BlueView
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"触摸蓝色的view");
-//}
-
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    NSLog(@"触摸蓝色的view");
-    return [super hitTest:point withEvent:event];
-}
 @end
