@@ -10,9 +10,11 @@
 
 @implementation Son
 
-//+ (void)load{
-//    NSLog(@"%s====%@",__FUNCTION__,[self class]);
-//}
++ (void)load{
+    NSLog(@"%s====%@",__FUNCTION__,[self class]);
+    NSArray *array = [NSArray array];
+    NSLog(@"%@",array);
+}
 
 //+ (void)initialize{
 //    NSLog(@"%s====%@",__FUNCTION__,[self class]);
