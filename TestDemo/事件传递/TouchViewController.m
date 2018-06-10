@@ -54,7 +54,9 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.button.transform = CGAffineTransformMakeTranslation(100, 0);
+//    self.button.transform = CGAffineTransformMakeTranslation(100, 0);
+    CustomView *view = [[CustomView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * 5, self.view.frame.size.height * 5)];
+    [self.view addSubview:view];
 //    [UIView animateWithDuration:1.0 animations:^{
 //        self.button.frame = CGRectMake(100, 450, 40, 40);
 //    }];
