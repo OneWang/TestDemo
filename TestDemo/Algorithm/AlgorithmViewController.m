@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"%@",[@"adfdsf" characterAtIndex:1]);
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     NSLog(@"%@",[self revertWithString:@"asdf"]);
@@ -99,6 +101,11 @@
     }else{
         return [NSString stringWithFormat:@"%@%@",[self revertWithString:[string substringWithRange:NSMakeRange(1, string.length - 1)]],[string substringToIndex:1]];
     }
+}
+
+- (NSString *)getSubString:(NSString *)firstString andString:(NSString *)secondString{
+    NSArray *firstArray = [firstString componentsSeparatedByString:@""];
+    return @"";
 }
 
 void reverse(char *value,char *result){

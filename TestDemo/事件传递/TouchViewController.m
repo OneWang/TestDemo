@@ -51,6 +51,42 @@
     [self.view addSubview:button];
     [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     self.button = button;
+    NSLog(@"%s",__func__);
+}
+
+- (void)loadView{
+    [super loadView];
+    NSLog(@"%s",__func__);
+}
+
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    NSLog(@"%s",__func__);
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    NSLog(@"%s",__func__);
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"%s",__func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__func__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    NSLog(@"%s",__func__);
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSLog(@"%s",__func__);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

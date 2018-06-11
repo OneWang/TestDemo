@@ -32,7 +32,7 @@
 
 //内存恶鬼；寄宿图的生成
 /**
- 因为重写了-drawRect：方法，-drawRect：方法就会自动调用，生成一张寄宿图后，方法里面的代码利用Core Graphics去绘制n条黑色的线，然后内容就会缓存起来，等待下次你调用-setNeedsDisplay时再进行更新；
+ 因为重写了-drawRect：方法，-drawRect：方法就会自动调用，生成一张寄宿图后，方法里面的代码利用Core Graphics去绘制n条黑色的线，然后内容就会缓存起来，等待下次你调用-setNeedsDisplay时再进行更新；  
  
  画板视图的-drawRect：方法的背后实际上都是底层的CALayer进行了重绘和保存中间产生的图片，CALayer的delegate属性默认实现了CALayerDelegate协议，当它需要内容信息的时候会调用协议中的方法来拿，当画板视图重绘时，因为它的支持图层CALayer的代理就是画板视图本身，所以支持图层会请求画板视图给它一个寄宿图来显示；它此刻会调用：- (void) displayLayer:(CALayer *)layer;
  
