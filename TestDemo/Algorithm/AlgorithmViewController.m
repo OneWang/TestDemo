@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@",[@"adfdsf" characterAtIndex:1]);
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -28,6 +27,20 @@
     if(result != NULL){
         reverse(value,result);
         printf("after reverse: %s\n",result);
+    }
+    
+    NSLog(@"%@",[self getSubString:@"addsfgd" andString:@"asfg"]);
+    
+    NSLog(@"%d",[self getNumber:3]);
+}
+
+- (int)getNumber:(int)n{
+    if (n == 0) {
+        return 0;
+    }else if (n == 1){
+        return 1;
+    }else{
+        return n * [self getNumber:(n - 1)];
     }
 }
 
@@ -104,8 +117,34 @@
 }
 
 - (NSString *)getSubString:(NSString *)firstString andString:(NSString *)secondString{
-    NSArray *firstArray = [firstString componentsSeparatedByString:@""];
-    return @"";
+    //首先找到长度较小的字符串 保证string1<string2
+    NSString *temp;
+    if (firstString.length > secondString.length) {
+        temp = firstString;
+        firstString = secondString;
+        secondString = temp;
+    }
+    long length1 = firstString.length;
+    //然后从长到短获取string1的子字符串,去string2中找,如果包含,则返回该子字符串,否则再找
+    NSRange range = NSMakeRange(0, length1);
+    while (![secondString containsString:[firstString substringWithRange:range]]&&range.location<=length1-1&&range.length>=1) {//如果string2不包含目前的子串并且没有越界
+        
+        //判断下一步操作
+        if (range.location < length1 - range.length) {//不需要减length
+            range.location++;
+        }else{
+            range.length--;
+            range.location = 0;
+        }
+    }
+    //最后判断并返回子串
+    if (range.length==0) {
+        NSLog(@"没有找到公共子字符串!");
+        return nil;
+    }else{
+        NSLog(@"找到了");
+        return [firstString substringWithRange:range];
+    }
 }
 
 void reverse(char *value,char *result){
