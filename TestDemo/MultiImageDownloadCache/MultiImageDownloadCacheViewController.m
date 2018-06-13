@@ -29,6 +29,18 @@
     [self.view addSubview:tableview];
     tableview.delegate = self;
     tableview.dataSource = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperationWithBlock:^{
+        NSLog(@"%@",[NSThread currentThread]);
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"test" object:nil];
+    }];
+}
+
+- (void)test{
+    NSLog(@"---------%@",[NSThread currentThread]);
 }
 
 #pragma mark ***************************** UITableViewDelegate,UITableViewDataSource *****************************

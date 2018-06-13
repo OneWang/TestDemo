@@ -14,6 +14,8 @@
     if (self = [super init]) {
         int array[] = {2,4,5,12,16,23,45};
         NSLog(@"%d",binary_search(array, sizeof(array) / sizeof(int), 5));
+        
+        NSLog(@"%@",[self combineTwoArray:@[@2,@5,@9] andSecondArray:@[@2,@3,@10]]);
     }
     return self;
 }
@@ -178,6 +180,29 @@ double Power(double base, int exponent) {
         pow = pow * base;
     return isNegative ? 1 / pow : pow;
 }
+
+/**
+    两个有序数组进行合并
+ */
+- (NSArray<NSNumber *> *)combineTwoArray:(NSArray<NSNumber *> *)first andSecondArray:(NSArray<NSNumber *> *)second{
+    NSMutableArray<NSNumber *> *tempArray = [NSMutableArray array];
+    NSInteger i = 0, j = 0, k = 0;
+    while (i < first.count && j < second.count) {
+        if (first[i].integerValue <= second[j].integerValue) {
+            tempArray[k++] = first[i++];
+        }else{
+            tempArray[k++] = second[j++];
+        }
+    }
+    while (i < first.count) {
+        tempArray[k++] = first[i++];
+    }
+    while (j < second.count) {
+        tempArray[k++] = second[j++];
+    }
+    return tempArray;
+}
+
 
 /**
  归并排序

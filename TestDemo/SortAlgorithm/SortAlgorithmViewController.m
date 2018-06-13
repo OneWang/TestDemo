@@ -18,9 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [[SortAlgorithm alloc] init];
-    NSLog(@"北条用");
-//    self.view.backgroundColor = [UIColor redColor];
+    [[SortAlgorithm alloc] init];
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 @end
