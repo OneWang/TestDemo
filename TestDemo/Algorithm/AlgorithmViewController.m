@@ -34,6 +34,7 @@
     NSLog(@"%d",[self getNumber:3]);
 }
 
+//通过递归完成n!运算
 - (int)getNumber:(int)n{
     if (n == 0) {
         return 0;
