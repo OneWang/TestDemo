@@ -14,8 +14,6 @@
     if (self = [super init]) {
         int array[] = {2,4,5,12,16,23,45};
         NSLog(@"%d",binary_search(array, sizeof(array) / sizeof(int), 5));
-        
-        NSLog(@"%@",[self combineTwoArray:@[@2,@5,@9] andSecondArray:@[@2,@3,@10]]);
     }
     return self;
 }
@@ -202,7 +200,6 @@ double Power(double base, int exponent) {
     }
     return tempArray;
 }
-
 
 /**
  归并排序

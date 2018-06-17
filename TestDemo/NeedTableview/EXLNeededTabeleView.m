@@ -51,14 +51,14 @@
     if (labs(firstIndexPath.row - indexPath.row) > skipcount) {
         NSArray *temp = [self indexPathsForRowsInRect:CGRectMake(0, targetContentOffset->y, self.width, self.height)];
         NSMutableArray *arr = [NSMutableArray arrayWithArray:temp];
-        if (velocity.y < 0) {
+        if (velocity.y < 0) {//向上滑的下面三个加进数组
             NSIndexPath *indexPath = [temp lastObject];
             if (indexPath.row + 3 < self.dataArray.count) {
                 [arr addObject:[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:0]];
                 [arr addObject:[NSIndexPath indexPathForRow:indexPath.row + 2 inSection:0]];
                 [arr addObject:[NSIndexPath indexPathForRow:indexPath.row + 3 inSection:0]];
             }
-        }else{
+        }else{//想下滑的上面三个加进去
             NSIndexPath *indexPath = [temp firstObject];
             if (indexPath.row > 3) {
                 [arr addObject:[NSIndexPath indexPathForRow:indexPath.row - 3 inSection:0]];

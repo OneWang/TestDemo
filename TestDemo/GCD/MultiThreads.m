@@ -35,6 +35,7 @@
         NSLog(@"3-%@", [NSThread currentThread]);
     });
     NSLog(@"4-%@", [NSThread currentThread]);
+    
 //串行队列同步派发任务
 //    dispatch_queue_t serial = dispatch_queue_create("串行", DISPATCH_QUEUE_SERIAL);
 //    dispatch_sync(serial, ^{
@@ -113,6 +114,7 @@
             dispatch_semaphore_signal(semaphore);
         });
     }
+    
 //    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 //    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
 //    NSMutableArray *array = [NSMutableArray array];

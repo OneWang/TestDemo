@@ -13,6 +13,7 @@
 + (void)load{
     NSLog(@"%s====%@",__FUNCTION__,[self class]);
     NSArray *array = [NSArray array];
+    //此处ARC已经做出了优化
     NSLog(@"%@",array);
 }
 
