@@ -47,6 +47,7 @@
 		04A4E67E20186EDD000F6370 /* AssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E67D20186EDD000F6370 /* AssetCell.m */; };
 		04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E6802018A34F000F6370 /* AssetImageManager.m */; };
 		04A4E68420196C63000F6370 /* AssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E68320196C63000F6370 /* AssetModel.m */; };
+		04A52FD320DBAA5D00D4FAA3 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A52FD220DBAA5D00D4FAA3 /* CollectionViewController.m */; };
 		04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6D357206CF221005A531B /* EXLNeededTabeleView.m */; };
 		04A6D35D206CF85C005A531B /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6D35C206CF85C005A531B /* UIView+Addition.m */; };
 		04B92FE0206A28B200FECA45 /* SortAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B92FDF206A28B200FECA45 /* SortAlgorithm.m */; };
@@ -173,6 +174,8 @@
 		04A4E6802018A34F000F6370 /* AssetImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetImageManager.m; sourceTree = "<group>"; };
 		04A4E68220196C63000F6370 /* AssetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetModel.h; sourceTree = "<group>"; };
 		04A4E68320196C63000F6370 /* AssetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetModel.m; sourceTree = "<group>"; };
+		04A52FD120DBAA5D00D4FAA3 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		04A52FD220DBAA5D00D4FAA3 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		04A6D357206CF221005A531B /* EXLNeededTabeleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXLNeededTabeleView.m; sourceTree = "<group>"; };
 		04A6D358206CF221005A531B /* EXLNeededTabeleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXLNeededTabeleView.h; sourceTree = "<group>"; };
 		04A6D35B206CF85C005A531B /* UIView+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
@@ -289,6 +292,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04A52FD020DBAA3200D4FAA3 /* Collection */,
 				0491827520C517540080788D /* Algorithm */,
 				048145AD20C2A49C00DB5380 /* CoreFoundation */,
 				04A2D43F20B6CBA60058D484 /* AutoLayout */,
@@ -454,6 +458,15 @@
 				04A2D44320B6CF640058D484 /* AutoLayoutViewController.storyboard */,
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		04A52FD020DBAA3200D4FAA3 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				04A52FD120DBAA5D00D4FAA3 /* CollectionViewController.h */,
+				04A52FD220DBAA5D00D4FAA3 /* CollectionViewController.m */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		04A6D35A206CF229005A531B /* NeedTableview */ = {
@@ -651,8 +664,6 @@
 				042E81C0200D933700AB47AB /* Sources */,
 				042E81C1200D933700AB47AB /* Frameworks */,
 				042E81C2200D933700AB47AB /* Resources */,
-				FAAD46A7451C9B4AA0E552BF /* [CP] Embed Pods Frameworks */,
-				4F78B433140E4F9D228FC2F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -793,36 +804,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4F78B433140E4F9D228FC2F4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FAAD46A7451C9B4AA0E552BF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -851,6 +832,7 @@
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
 				04F13E1D20BE7FEB0016AD48 /* NSObject+Sark.m in Sources */,
 				04A4E68420196C63000F6370 /* AssetModel.m in Sources */,
+				04A52FD320DBAA5D00D4FAA3 /* CollectionViewController.m in Sources */,
 				0447BD6320B4525200C59C9E /* CopyAndMutableCopyViewController.m in Sources */,
 				04DC99E220C9497200B7CDBC /* Aview.m in Sources */,
 				04A4E6812018A34F000F6370 /* AssetImageManager.m in Sources */,
