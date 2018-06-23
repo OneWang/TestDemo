@@ -4,7 +4,7 @@
 //
 //  Created by Jack on 2018/6/21.
 //  Copyright © 2018年 Jack. All rights reserved.
-//
+//  类簇的子类
 
 #import "CollectionViewController.h"
 
