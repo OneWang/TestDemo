@@ -180,7 +180,7 @@ double Power(double base, int exponent) {
 }
 
 /**
-    两个有序数组进行合并
+    两个有序数组进行合并操作
  */
 - (NSArray<NSNumber *> *)combineTwoArray:(NSArray<NSNumber *> *)first andSecondArray:(NSArray<NSNumber *> *)second{
     NSMutableArray<NSNumber *> *tempArray = [NSMutableArray array];
