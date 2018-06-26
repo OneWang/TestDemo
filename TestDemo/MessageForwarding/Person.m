@@ -40,6 +40,7 @@ id eat (id self, SEL _cmd){
     }
     return [super resolveInstanceMethod:sel];
 }
+
 //类方法
 //+ (BOOL)resolveClassMethod:(SEL)sel{
 //    return [super resolveClassMethod:sel];
@@ -57,7 +58,7 @@ id eat (id self, SEL _cmd){
 
 //完整的消息转发机制
 /**
-    启用完整的消息转发机制首先需要创建一个NSInvocation对象，把尚未处理的消息有关的全部细节全部封装到NSInvocation对象中（包含选择子（SEL）,目标（target）以及参数），在触发NSInvocation对象时，消息派发系统亲自出面将消息指派给目标对象；
+    启用完整的消息转发机制首先需要创建一个NSInvocation对象，把尚未处理的消息有关的全部细节全部封装到NSInvocation对象中（包含选择子（SEL）,目标（target）以及参数），在触发NSInvocation对象时，消息派发系统亲自出面将消息指派给目标对象；启动完整的消息转发机制
  */
 //此方法只是修改了方法调用的目标对象，使方法在新的目标对象得以调用；最终这种方法和备援接收者方案所实现的方法是等效的；比较有用的实现方式是：在触发消息之前，以某种方式修改方法的内容，比如修改方法的选择子（SEL），追加参数等等；
 - (void)forwardInvocation:(NSInvocation *)anInvocation{

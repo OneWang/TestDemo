@@ -20,15 +20,22 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
         
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"1");
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"2");
-        });
-        NSLog(@"3");
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSLog(@"1");
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"2");
+//        });
+//        NSLog(@"3");
+//    });
     
-    [[MultiThreads new] testGCDSemaphore];
+    NSLog(@"1---%@",[NSThread currentThread]);
+//    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"2---%@",[NSThread currentThread]);
+    });
+//    NSLog(@"3");
+    
+//    [[MultiThreads new] testGCDSemaphore];
     
 }
 

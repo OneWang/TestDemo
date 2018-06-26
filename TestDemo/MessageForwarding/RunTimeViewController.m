@@ -22,5 +22,4 @@
     [[NSObject new] performSelector:@selector(foo)];
 }
 
-
 @end
