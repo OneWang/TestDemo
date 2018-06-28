@@ -7,6 +7,9 @@
 //
 
 #import "BlockAndPointerViewController.h"
+#import "BlockAndPointer.h"
+
+typedef void(^block)(NSString *);
 
 @interface BlockAndPointerViewController ()
 
@@ -16,7 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    BlockAndPointer *test = [[BlockAndPointer alloc] init];
+    
+    NSInteger number = 10;
+    void(^block)(NSString *) = ^(NSString *string){
+        NSLog(@"%ld===",number);
+    };
+    
+    NSLog(@"%@",block);
+    
+    block(@"asd");
 }
 
 - (void)didReceiveMemoryWarning {

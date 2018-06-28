@@ -27,6 +27,7 @@
 #import "AlgorithmViewController.h"
 #import "AutoLayoutViewController.h"
 #import "CollectionViewController.h"
+#import "BlockAndPointerViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -101,6 +102,9 @@
     
     MainModel *model18 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([CollectionViewController class]),@"destationVC":[CollectionViewController class]}];
     [self.dataArray addObject:model18];
+    
+    MainModel *model19 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([BlockAndPointerViewController class]),@"destationVC":[BlockAndPointerViewController class]}];
+    [self.dataArray addObject:model19];
 }
 
 - (void)createChildViews{

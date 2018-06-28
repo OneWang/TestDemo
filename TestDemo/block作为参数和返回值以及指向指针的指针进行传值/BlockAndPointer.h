@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface BlockAndPointer : NSObject
-
+/** name */
+@property (copy, nonatomic) NSString *name;
 @end

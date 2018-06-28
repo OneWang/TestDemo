@@ -10,6 +10,13 @@
 
 @implementation BlockAndPointer
 
+- (instancetype)init{
+    if (self = [super init]) {
+        self.name = @"jack";
+    }
+    return self;
+}
+
 #pragma mark - block作为参数和返回值的使用
 - (void)testFunction{
     [self setUpTitleEffect:^(NSString *__autoreleasing *title, CGFloat *width) {
