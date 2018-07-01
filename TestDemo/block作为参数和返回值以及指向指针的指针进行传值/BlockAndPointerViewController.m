@@ -32,9 +32,4 @@ typedef void(^block)(NSString *);
     block(@"asd");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
