@@ -78,6 +78,7 @@
 		04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */; };
 		04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72A492092C47E00BF9395 /* RunloopViewController.m */; };
 		309A92F81F799A3E0A0E52CF /* libPods-TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */; };
+		AAD35F5220E9BC0300755AC1 /* ImageViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,8 @@
 		04F72A492092C47E00BF9395 /* RunloopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopViewController.m; sourceTree = "<group>"; };
 		11E8BBCF2939482AEE1E8519 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAD35F5020E9BC0300755AC1 /* ImageViewTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewTestViewController.h; sourceTree = "<group>"; };
+		AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewTestViewController.m; sourceTree = "<group>"; };
 		F4F2226B2F3CA6FDCE887C40 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +295,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AAD35F4F20E9BBEB00755AC1 /* ImageViewTest */,
 				04A52FD020DBAA3200D4FAA3 /* Collection */,
 				0491827520C517540080788D /* Algorithm */,
 				048145AD20C2A49C00DB5380 /* CoreFoundation */,
@@ -653,6 +657,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AAD35F4F20E9BBEB00755AC1 /* ImageViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				AAD35F5020E9BC0300755AC1 /* ImageViewTestViewController.h */,
+				AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */,
+			);
+			path = ImageViewTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -862,6 +875,7 @@
 				04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */,
 				0491827820C5178A0080788D /* AlgorithmViewController.m in Sources */,
 				04109B6520B2DA79007C37CF /* NeedTabelViewViewController.m in Sources */,
+				AAD35F5220E9BC0300755AC1 /* ImageViewTestViewController.m in Sources */,
 				04C00D742078E1EE000EA706 /* BlockAndPointerViewController.m in Sources */,
 				04C55B382065096800571715 /* Father.m in Sources */,
 				04C9FCC82078FACD00EE8DB6 /* MainModel.m in Sources */,
@@ -1021,10 +1035,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5G6EP3AMGZ;
+				DEVELOPMENT_TEAM = 9M5B7RRTA9;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/jack/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = TestDemo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1040,6 +1055,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.www.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1050,10 +1067,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5G6EP3AMGZ;
+				DEVELOPMENT_TEAM = 9M5B7RRTA9;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/jack/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = TestDemo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1069,6 +1087,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.www.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

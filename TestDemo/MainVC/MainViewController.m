@@ -28,6 +28,7 @@
 #import "AutoLayoutViewController.h"
 #import "CollectionViewController.h"
 #import "BlockAndPointerViewController.h"
+#import "ImageViewTestViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -105,6 +106,9 @@
     
     MainModel *model19 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([BlockAndPointerViewController class]),@"destationVC":[BlockAndPointerViewController class]}];
     [self.dataArray addObject:model19];
+    
+    MainModel *model20 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([ImageViewTestViewController class]),@"destationVC":[ImageViewTestViewController class]}];
+    [self.dataArray addObject:model20];
 }
 
 - (void)createChildViews{
