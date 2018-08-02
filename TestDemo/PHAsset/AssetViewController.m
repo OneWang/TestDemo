@@ -11,19 +11,22 @@
 #import "AssetImageManager.h"
 #import "AssetModel.h"
 #import <Photos/Photos.h>
+#import "PreviewView.h"
 
 @interface AssetViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,AssetCellDelegate>
 
 /** collectionview */
 @property (weak, nonatomic) UICollectionView *collectionView;
 /** 相册数组 */
-@property (strong, nonatomic) NSMutableArray *assetArray;
+@property (strong, nonatomic) NSMutableArray<AssetModel *> *assetArray;
 /** 图片选择数label */
 @property (weak, nonatomic) UILabel *countLabel;
 /** 选中的图片数组 */
-@property (strong, nonatomic) NSMutableArray *selectArray;
+@property (strong, nonatomic) NSMutableArray<AssetModel *> *selectArray;
 /** 初始化大小 */
 @property (assign, nonatomic) CGRect cellRect;
+/** 全选按钮 */
+@property (nonatomic, weak) UIButton *allSelectButton;
 @end
 
 @implementation AssetViewController
@@ -95,6 +98,37 @@
     count.layer.masksToBounds = YES;
     self.countLabel = count;
     count.backgroundColor = mainColor;
+    
+    UIButton *allSelect = [UIButton buttonWithType:UIButtonTypeCustom];
+    [allSelect setTitle:@"全选" forState:UIControlStateNormal];
+    [allSelect setTitle:@"取消" forState:UIControlStateSelected];
+    [allSelect setTitleColor:mainColor forState:UIControlStateNormal];
+    allSelect.adjustsImageWhenDisabled = NO;
+    allSelect.adjustsImageWhenHighlighted = NO;
+    [tool addSubview:allSelect];
+    allSelect.frame = CGRectMake(10, 0, 40, 49);
+    [allSelect addTarget:self action:@selector(allClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.allSelectButton = allSelect;
+}
+
+- (void)allClick:(UIButton *)button{
+    button.selected = !button.selected;
+    [self.selectArray removeAllObjects];
+    [_assetArray enumerateObjectsUsingBlock:^(AssetModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (button.selected) {
+            obj.selected = YES;
+            [self.selectArray addObject:obj];
+        }else{
+            obj.selected = NO;
+            [self.selectArray removeAllObjects];
+        }
+    }];
+    [_collectionView reloadData];
+    if (button.selected) {
+        _countLabel.text = [NSString stringWithFormat:@"%zd",_assetArray.count];
+    }else{
+        _countLabel.text = @"0";
+    }
 }
 
 - (void)doneClick:(UIButton *)button{
@@ -165,8 +199,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIView *previewView = [[UIView alloc] init];
-    previewView.backgroundColor = [UIColor redColor];
+    PreviewView *previewView = [[PreviewView alloc] init];
     AssetCell *cell = (AssetCell *)[collectionView cellForItemAtIndexPath:indexPath];
     CGRect rect = [cell convertRect:cell.bounds toView:self.view];
     previewView.frame = rect;
@@ -178,7 +211,8 @@
         previewView.alpha = 1.0;
         previewView.frame = UIScreen.mainScreen.bounds;
     } completion:^(BOOL finished) {
-        
+        previewView.dataArray = self.assetArray;
+        previewView.index = indexPath.row;
     }];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
     [previewView addGestureRecognizer:tap];
@@ -206,6 +240,13 @@
         [self.selectArray removeObject:model];
     }
     self.countLabel.text = [NSString stringWithFormat:@"%zd",self.selectArray.count];
+    if (_assetArray.count == _selectArray.count) {
+        _allSelectButton.selected = YES;
+        [_allSelectButton setTitle:@"取消" forState:UIControlStateSelected];
+    }else{
+        _allSelectButton.selected = NO;
+        [_allSelectButton setTitle:@"全选" forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark - setter and getter

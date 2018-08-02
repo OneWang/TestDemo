@@ -78,6 +78,7 @@
 		04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */; };
 		04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72A492092C47E00BF9395 /* RunloopViewController.m */; };
 		309A92F81F799A3E0A0E52CF /* libPods-TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */; };
+		AA227A2E211302DF00C5D951 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA227A2D211302DF00C5D951 /* PreviewView.m */; };
 		AAD35F5220E9BC0300755AC1 /* ImageViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +239,8 @@
 		04F72A492092C47E00BF9395 /* RunloopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopViewController.m; sourceTree = "<group>"; };
 		11E8BBCF2939482AEE1E8519 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA227A2C211302DF00C5D951 /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
+		AA227A2D211302DF00C5D951 /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
 		AAD35F5020E9BC0300755AC1 /* ImageViewTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewTestViewController.h; sourceTree = "<group>"; };
 		AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewTestViewController.m; sourceTree = "<group>"; };
 		F4F2226B2F3CA6FDCE887C40 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 				04A4E68320196C63000F6370 /* AssetModel.m */,
 				042C1764201EC7EB006D1539 /* ItemCell.h */,
 				042C1765201EC7EB006D1539 /* ItemCell.m */,
+				AA227A2C211302DF00C5D951 /* PreviewView.h */,
+				AA227A2D211302DF00C5D951 /* PreviewView.m */,
 			);
 			path = PHAsset;
 			sourceTree = "<group>";
@@ -882,6 +887,7 @@
 				0455882E2079CD200052D9B8 /* Stuff.m in Sources */,
 				0431511B20AEAAB10061474E /* DownloadImage.m in Sources */,
 				042E81C9200D933700AB47AB /* AppDelegate.m in Sources */,
+				AA227A2E211302DF00C5D951 /* PreviewView.m in Sources */,
 				045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */,
 				04DC99EB20C9499800B7CDBC /* Dview.m in Sources */,
 				04C9FCC12078F8DA00EE8DB6 /* HeightLevelCornerViewController.m in Sources */,
@@ -1037,7 +1043,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9M5B7RRTA9;
+				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = TestDemo/config/Info.plist;
@@ -1069,7 +1075,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9M5B7RRTA9;
+				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = TestDemo/config/Info.plist;
