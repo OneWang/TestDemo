@@ -79,6 +79,7 @@
 		04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72A492092C47E00BF9395 /* RunloopViewController.m */; };
 		309A92F81F799A3E0A0E52CF /* libPods-TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */; };
 		AA227A2E211302DF00C5D951 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA227A2D211302DF00C5D951 /* PreviewView.m */; };
+		AA83922521184B1A00C1C65B /* Algorithm.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA83922421184B1A00C1C65B /* Algorithm.mm */; };
 		AAD35F5220E9BC0300755AC1 /* ImageViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -241,6 +242,7 @@
 		75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA227A2C211302DF00C5D951 /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
 		AA227A2D211302DF00C5D951 /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
+		AA83922421184B1A00C1C65B /* Algorithm.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Algorithm.mm; sourceTree = "<group>"; };
 		AAD35F5020E9BC0300755AC1 /* ImageViewTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewTestViewController.h; sourceTree = "<group>"; };
 		AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewTestViewController.m; sourceTree = "<group>"; };
 		F4F2226B2F3CA6FDCE887C40 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AA83922321184AEF00C1C65B /* LinkNode */,
 				AAD35F4F20E9BBEB00755AC1 /* ImageViewTest */,
 				04A52FD020DBAA3200D4FAA3 /* Collection */,
 				0491827520C517540080788D /* Algorithm */,
@@ -662,6 +665,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AA83922321184AEF00C1C65B /* LinkNode */ = {
+			isa = PBXGroup;
+			children = (
+				AA83922421184B1A00C1C65B /* Algorithm.mm */,
+			);
+			path = LinkNode;
+			sourceTree = "<group>";
+		};
 		AAD35F4F20E9BBEB00755AC1 /* ImageViewTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +877,7 @@
 				042E81D7200D933700AB47AB /* main.m in Sources */,
 				042F63CD20764002005A9EF7 /* MultiThreads.m in Sources */,
 				049CE1FA20B1C10D0036BB89 /* OCAndJSInteractionViewController.m in Sources */,
+				AA83922521184B1A00C1C65B /* Algorithm.mm in Sources */,
 				04C55B4120650C6800571715 /* Son+category.m in Sources */,
 				04109B5F20B2D4EB007C37CF /* OCCallJSViewController.m in Sources */,
 				04109B6220B2D4F5007C37CF /* JSCallOCViewController.m in Sources */,
