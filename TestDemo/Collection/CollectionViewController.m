@@ -37,6 +37,12 @@
     //copy之后转换为__NSArrayI是不可变数组，也就是没有removeObjectAtIndex:方法了
 //    [self.dataArray removeObjectAtIndex:0];
     NSLog(@"%@",self.dataArray);
+    
+    
+    NSMutableArray *array1 = [[NSMutableArray alloc] initWithArray:@[@"1",@"2"]];
+    NSArray *test1 = array1;
+    [array1 addObject:@"3"];
+    NSLog(@"集合类:%@",test1);
 }
 
 @end
