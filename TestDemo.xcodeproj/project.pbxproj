@@ -79,6 +79,7 @@
 		04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72A492092C47E00BF9395 /* RunloopViewController.m */; };
 		309A92F81F799A3E0A0E52CF /* libPods-TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */; };
 		AA227A2E211302DF00C5D951 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA227A2D211302DF00C5D951 /* PreviewView.m */; };
+		AA29CFCD211927DC005BAB76 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AA29CFCC211927DC005BAB76 /* BinaryTreeNode.m */; };
 		AA83922521184B1A00C1C65B /* Algorithm.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA83922421184B1A00C1C65B /* Algorithm.mm */; };
 		AAD35F5220E9BC0300755AC1 /* ImageViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */; };
 /* End PBXBuildFile section */
@@ -242,6 +243,8 @@
 		75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA227A2C211302DF00C5D951 /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
 		AA227A2D211302DF00C5D951 /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
+		AA29CFCB211927DC005BAB76 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
+		AA29CFCC211927DC005BAB76 /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		AA83922421184B1A00C1C65B /* Algorithm.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Algorithm.mm; sourceTree = "<group>"; };
 		AAD35F5020E9BC0300755AC1 /* ImageViewTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewTestViewController.h; sourceTree = "<group>"; };
 		AAD35F5120E9BC0300755AC1 /* ImageViewTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewTestViewController.m; sourceTree = "<group>"; };
@@ -300,6 +303,7 @@
 		042E81C6200D933700AB47AB /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AA29CFCA21192794005BAB76 /* BinaryTree */,
 				AA83922321184AEF00C1C65B /* LinkNode */,
 				AAD35F4F20E9BBEB00755AC1 /* ImageViewTest */,
 				04A52FD020DBAA3200D4FAA3 /* Collection */,
@@ -665,6 +669,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AA29CFCA21192794005BAB76 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				AA29CFCB211927DC005BAB76 /* BinaryTreeNode.h */,
+				AA29CFCC211927DC005BAB76 /* BinaryTreeNode.m */,
+			);
+			path = BinaryTree;
+			sourceTree = "<group>";
+		};
 		AA83922321184AEF00C1C65B /* LinkNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +861,7 @@
 				0406C5D020565F9D00C91098 /* UIImage+ClipVIew.m in Sources */,
 				04109B6820B2DDA4007C37CF /* YYFPSLabel.m in Sources */,
 				04C00D712078D745000EA706 /* BlockAndPointer.m in Sources */,
+				AA29CFCD211927DC005BAB76 /* BinaryTreeNode.m in Sources */,
 				048145B020C2A4B000DB5380 /* CoreFoundationViewController.m in Sources */,
 				04DC99E520C9498800B7CDBC /* Bview.m in Sources */,
 				04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */,
