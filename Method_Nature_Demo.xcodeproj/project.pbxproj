@@ -281,9 +281,9 @@
 		042E81BB200D933700AB47AB = {
 			isa = PBXGroup;
 			children = (
-				042E81C6200D933700AB47AB /* TestDemo */,
-				042E81DF200D933700AB47AB /* TestDemoTests */,
-				042E81EA200D933700AB47AB /* TestDemoUITests */,
+				042E81C6200D933700AB47AB /* Method_Nature_Demo */,
+				042E81DF200D933700AB47AB /* Method_Nature_DemoTests */,
+				042E81EA200D933700AB47AB /* Method_Nature_DemoUITests */,
 				042E81C5200D933700AB47AB /* Products */,
 				042E81F9200D969300AB47AB /* Frameworks */,
 				63CC9FDA0BFD5B60D5BB039B /* Pods */,
@@ -300,7 +300,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		042E81C6200D933700AB47AB /* TestDemo */ = {
+		042E81C6200D933700AB47AB /* Method_Nature_Demo */ = {
 			isa = PBXGroup;
 			children = (
 				AA29CFCA21192794005BAB76 /* BinaryTree */,
@@ -331,25 +331,25 @@
 				04C55B292064F37600571715 /* PHAsset */,
 				04C55B282064F32F00571715 /* MessageForwarding */,
 			);
-			path = TestDemo;
+			path = Method_Nature_Demo;
 			sourceTree = "<group>";
 		};
-		042E81DF200D933700AB47AB /* TestDemoTests */ = {
+		042E81DF200D933700AB47AB /* Method_Nature_DemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				042E81E0200D933700AB47AB /* TestDemoTests.m */,
 				042E81E2200D933700AB47AB /* Info.plist */,
 			);
-			path = TestDemoTests;
+			path = Method_Nature_DemoTests;
 			sourceTree = "<group>";
 		};
-		042E81EA200D933700AB47AB /* TestDemoUITests */ = {
+		042E81EA200D933700AB47AB /* Method_Nature_DemoUITests */ = {
 			isa = PBXGroup;
 			children = (
 				042E81EB200D933700AB47AB /* TestDemoUITests.m */,
 				042E81ED200D933700AB47AB /* Info.plist */,
 			);
-			path = TestDemoUITests;
+			path = Method_Nature_DemoUITests;
 			sourceTree = "<group>";
 		};
 		042E81F9200D969300AB47AB /* Frameworks */ = {
@@ -777,7 +777,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 042E81BF200D933700AB47AB /* Build configuration list for PBXProject "TestDemo" */;
+			buildConfigurationList = 042E81BF200D933700AB47AB /* Build configuration list for PBXProject "Method_Nature_Demo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1071,8 +1071,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
-				INFOPLIST_FILE = TestDemo/config/Info.plist;
+				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/Method_Nature_Demo/Config/PrefixHeader.pch;
+				INFOPLIST_FILE = Method_Nature_Demo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1085,7 +1085,7 @@
 					"\"UIKit\"",
 					"-w",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.www.TestDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1103,8 +1103,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/TestDemo/Config/PrefixHeader.pch;
-				INFOPLIST_FILE = TestDemo/config/Info.plist;
+				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/TestDemo/Method_Nature_Demo/Config/PrefixHeader.pch;
+				INFOPLIST_FILE = Method_Nature_Demo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1117,7 +1117,7 @@
 					"\"UIKit\"",
 					"-w",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.www.TestDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1181,7 +1181,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		042E81BF200D933700AB47AB /* Build configuration list for PBXProject "TestDemo" */ = {
+		042E81BF200D933700AB47AB /* Build configuration list for PBXProject "Method_Nature_Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				042E81EE200D933700AB47AB /* Debug */,
