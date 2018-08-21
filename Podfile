@@ -1,4 +1,4 @@
-target 'MethodNature_Demo' do
+target 'Method_Nature_Demo' do
     
 pod 'Masonry'
 pod 'YYModel'
