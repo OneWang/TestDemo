@@ -18,8 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[SortAlgorithm alloc] init];
+    SortAlgorithm *algorithm = [[SortAlgorithm alloc] init];
+    NSLog(@"%@",algorithm);
+    NSLog(@"%d",findMaxSubstring(@"abcda"));
     self.view.backgroundColor = [UIColor redColor];
+    
 }
 
 @end

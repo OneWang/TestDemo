@@ -30,4 +30,6 @@
  */
 - (void)mergerSort:(NSMutableArray *)dataArray leftIndex:(NSInteger)left rightIndex:(NSInteger)right;
 
+int findMaxSubstring(NSString *string);
+
 @end
