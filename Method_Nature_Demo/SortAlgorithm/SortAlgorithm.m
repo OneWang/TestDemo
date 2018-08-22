@@ -312,10 +312,11 @@ int fibbonacci(int n){
     }
 }
 
+//查找字符串中最大的无重复的子串长度
 int findMaxSubstring(NSString *string){
     if(string.length == 1) return 1;
     if(string.length == 0) return 0;
-    NSArray *str = [string componentsSeparatedByString:@","];
+    NSArray *str = stringConvertToArray(string);
     int i = 0,j = i+1,max = 0;
     Boolean  t = true;
     while(i < string.length - 1){
@@ -341,6 +342,14 @@ int findMaxSubstring(NSString *string){
         }
     }
     return max;
+}
+//无分隔符的字符串转换为数组
+NSArray<NSString *> * stringConvertToArray(NSString *string){
+    NSMutableArray *array = [NSMutableArray array];
+    [string enumerateSubstringsInRange:NSMakeRange(0, string.length) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+        [array addObject:substring];
+    }];
+    return array;
 }
 
 @end

@@ -20,7 +20,7 @@
     
     SortAlgorithm *algorithm = [[SortAlgorithm alloc] init];
     NSLog(@"%@",algorithm);
-    NSLog(@"%d",findMaxSubstring(@"abcda"));
+    NSLog(@"%d",findMaxSubstring(@"abcba"));
     self.view.backgroundColor = [UIColor redColor];
     
 }
