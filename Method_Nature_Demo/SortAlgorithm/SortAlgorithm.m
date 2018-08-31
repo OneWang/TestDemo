@@ -14,6 +14,8 @@
     if (self = [super init]) {
         int array[] = {2,4,5,12,16,23,45};
         NSLog(@"%d",binary_search(array, sizeof(array) / sizeof(int), 5));
+         
+        NSLog(@"%c",findFirstChar("asdffas"));
     }
     return self;
 }
@@ -318,12 +320,16 @@ int findMaxSubstring(NSString *string){
     if(string.length == 0) return 0;
     NSArray *str = stringConvertToArray(string);
     int i = 0,j = i+1,max = 0;
-    Boolean  t = true;
+    //字符串中所包含的子串是否包含相同的字符
+    Boolean t = true;
     while(i < string.length - 1){
         int length = 1;
         //检测是否重复
         if(j == string.length) break;
-        for(int k = i; k < j;k++){
+        /**
+            遍历一个字符串的子串中是否有重复的字符
+         */
+        for(int k = i; k < j; k++){
             if(str[j] != str[k] ){
                 length++;
             }else{
@@ -334,12 +340,10 @@ int findMaxSubstring(NSString *string){
         if(length > max){
             max = length;
         }
-        //如果检测成功，j指针右移一次
-        if(t) j++;
-        //检测失败，i指针右移一次，j指针回到i+1的位置
-        else{
+        if(t)   //如果检测成功，j指针右移一次
+            j++;
+        else    //检测失败，i指针右移一次，j指针回到i+1的位置
             t = true; i++; j = i + 1; length = 1;
-        }
     }
     return max;
 }
@@ -350,6 +354,40 @@ NSArray<NSString *> * stringConvertToArray(NSString *string){
         [array addObject:substring];
     }];
     return array;
+}
+
+//查找第一个只出现一次的字符
+char findFirstChar(char* cha){
+    char result = '\0';
+    
+    // 定义一个数组 用来存储各个字母出现次数
+    int array[256];
+    
+    // 对数组进行初始化操作
+    for (int i=0; i<256; i++) {
+        array[i] =0;
+    }
+    // 定义一个指针 指向当前字符串头部
+    char* p = cha;
+    // 遍历每个字符
+    while (*p != '\0') {
+        // 在字母对应存储位置 进行出现次数+1操作
+        array[*(p++)]++;
+    }
+    
+    // 将P指针重新指向字符串头部
+    p = cha;
+    // 遍历每个字母的出现次数
+    while (*p != '\0') {
+        // 遇到第一个出现次数为1的字符，打印结果
+        if (array[*p] == 1){
+            result = *p;
+            break;
+        }
+        // 反之继续向后遍历
+        p++;
+    }
+    return result;
 }
 
 @end

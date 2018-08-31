@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 
+//查找字符串中最大的无重复子串
 int findMaxSubstring(NSString *string){
     if(string.length == 1) return 1;
     if(string.length == 0) return 0;
@@ -29,12 +30,10 @@ int findMaxSubstring(NSString *string){
         if(length > max){
             max = length;
         }
-        //如果检测成功，j指针右移一次
-        if(t) j++;
-        //检测失败，i指针右移一次，j指针回到i+1的位置
-        else{
+        if(t)   //如果检测成功，j指针右移一次
+            j++;
+        else    //检测失败，i指针右移一次，j指针回到i+1的位置
             t = true; i++; j = i + 1; length = 1;
-        }
     }
     return max;
 }
