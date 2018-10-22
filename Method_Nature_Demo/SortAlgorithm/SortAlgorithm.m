@@ -16,6 +16,8 @@
         NSLog(@"%d",binary_search(array, sizeof(array) / sizeof(int), 5));
          
         NSLog(@"%c",findFirstChar("asdffas"));
+        
+        NSLog(@"%@",[self getNextWithString:@"asdfasd"]);
     }
     return self;
 }
@@ -388,6 +390,23 @@ char findFirstChar(char* cha){
         p++;
     }
     return result;
+}
+
+//获取 next 数组
+- (NSArray *)getNextWithString:(NSString *)string{
+    NSArray *charArray = stringConvertToArray(string);
+    NSMutableArray *nextArray = [NSMutableArray array];
+    nextArray[0] = @-1;
+    int j = 0;
+    int k = -1;
+    while (j < string.length - 1) {
+        if(k == -1 || charArray[j] == charArray[k]){
+            nextArray[++j] = @(++k);
+        }else{
+            k = [nextArray[k] intValue];
+        }
+    }
+    return nextArray;
 }
 
 @end

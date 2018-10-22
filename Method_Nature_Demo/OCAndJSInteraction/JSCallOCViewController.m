@@ -22,6 +22,8 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     [super webViewDidFinishLoad:webView];
     
+    [self presentViewController:nil animated:YES completion:nil];
+    
     __weak typeof(self)this = self;
     self.context[@"tapAndLogAction"] = ^(){
         dispatch_async(dispatch_get_main_queue(), ^{

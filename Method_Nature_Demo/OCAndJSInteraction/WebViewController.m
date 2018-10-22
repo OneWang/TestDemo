@@ -18,8 +18,7 @@
 
 @implementation WebViewController
 
-- (instancetype)initWithHTMLFileName:(NSString *)htmlFileName
-{
+- (instancetype)initWithHTMLFileName:(NSString *)htmlFileName{
     self = [super init];
     if (self) {
         self.htmlFileName = htmlFileName;
@@ -52,8 +51,7 @@
     [self.webView addSubview:self.indicatorView];
 }
 
-- (void)requestHTML
-{
+- (void)requestHTML{
     NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:self.htmlFileName];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
     [self.webView loadRequest: request];
@@ -74,12 +72,25 @@
     };
 }
 
-- (void)showAlertViewWithMessage:(NSString *)message
-{
+- (void)showAlertViewWithMessage:(NSString *)message{
     UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     [vc addAction:cancelAction];
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)test{
+    JSValue *intValue = [JSValue valueWithInt32:10 inContext:self.context];
+    JSValue *boolValue = [JSValue valueWithBool:YES inContext:self.context];
+    
+    JSValue *person = [JSValue valueWithNewObjectInContext:self.context];
+    [person setObject:@"OneWang" forKeyedSubscript:@"name"];
+    [person setObject:@27 forKeyedSubscript:@"age"];
+    NSLog(@"%@----%@-----%@-----%@",person[@"name"],person[@"age"],intValue.toString,boolValue.toString);
+    
+    [self.context evaluateScript:@"function add(a,b){return a + b}"];
+    JSValue *value = [self.context[@"add"] callWithArguments:@[@2,@2]];
+    NSLog(@"%@",value.toString);
 }
 
 @end
