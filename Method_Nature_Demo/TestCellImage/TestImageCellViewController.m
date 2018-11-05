@@ -34,26 +34,46 @@
 - (void)crateChildView{
     UITableView *tablView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height) style:UITableViewStyleGrouped];
     [self.view addSubview:tablView];
-    tablView.estimatedRowHeight = 120;
+//    tablView.estimatedRowHeight = 120;
     [self.view addSubview:tablView];
     tablView.delegate = self;
     tablView.dataSource = self;
+    
+//    NSDate *date = [NSDate date];
 }
 
 #pragma mark ***************************** UITableViewDelegate,UITableViewDataSource *****************************
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{return 4;}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    NSLog(@"%s",__func__);
+    return 2;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSLog(@"%s",__func__);
     return self.images.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ImageCell *cell = [ImageCell cellWithTableView:tableView];
     cell.imageName = self.images[indexPath.row];
+    NSLog(@"%s---%zd",__func__,indexPath.row);
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{return 120;}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%s---%zd",__func__,indexPath.row);
+    return 120;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    NSLog(@"%s",__func__);
+    return 20.f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    NSLog(@"%s",__func__);
+    return 20.f;
+}
 
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
@@ -62,8 +82,7 @@
     return _dataArray;
 }
 
-- (NSMutableArray *)images
-{
+- (NSMutableArray *)images{
     if (!_images) {
         _images = [NSMutableArray array];
         for (int i = 1; i < 20; i++) {
