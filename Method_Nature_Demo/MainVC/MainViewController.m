@@ -29,6 +29,7 @@
 #import "CollectionViewController.h"
 #import "BlockAndPointerViewController.h"
 #import "ImageViewTestViewController.h"
+#import "MultiImageUploadViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -109,6 +110,9 @@
     
     MainModel *model20 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([ImageViewTestViewController class]),@"destationVC":[ImageViewTestViewController class]}];
     [self.dataArray addObject:model20];
+    
+    MainModel *model21 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([MultiImageUploadViewController class]),@"destationVC":[MultiImageUploadViewController class]}];
+    [self.dataArray addObject:model21];
 }
 
 - (void)createChildViews{

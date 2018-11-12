@@ -5,5 +5,6 @@ pod 'YYModel'
 #pod 'MarqueeView'
 pod 'SDWebImage'
 pod 'YYCache'
+pod 'AFNetworking'
 
 end

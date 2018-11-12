@@ -73,6 +73,8 @@
 		04E0EC2A207CA77D00D38A5D /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC29207CA77D00D38A5D /* TouchViewController.m */; };
 		04E0EC2D207CA87300D38A5D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2C207CA87300D38A5D /* CustomView.m */; };
 		04E0EC30207CAC9E00D38A5D /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0EC2F207CAC9E00D38A5D /* SubView.m */; };
+		04E6899E2199B98700CA15E8 /* MLURLSessionWrapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6899D2199B98700CA15E8 /* MLURLSessionWrapperOperation.m */; };
+		04EE61A621980DC00048E442 /* MultiImageUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE61A521980DC00048E442 /* MultiImageUploadViewController.m */; };
 		04F13E1D20BE7FEB0016AD48 /* NSObject+Sark.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F13E1C20BE7FEB0016AD48 /* NSObject+Sark.m */; };
 		04F13E2020BE80290016AD48 /* RunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F13E1F20BE80290016AD48 /* RunTimeViewController.m */; };
 		04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */; };
@@ -232,6 +234,10 @@
 		04E0EC2C207CA87300D38A5D /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		04E0EC2E207CAC9E00D38A5D /* SubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubView.h; sourceTree = "<group>"; };
 		04E0EC2F207CAC9E00D38A5D /* SubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubView.m; sourceTree = "<group>"; };
+		04E6899C2199B98700CA15E8 /* MLURLSessionWrapperOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLURLSessionWrapperOperation.h; sourceTree = "<group>"; };
+		04E6899D2199B98700CA15E8 /* MLURLSessionWrapperOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLURLSessionWrapperOperation.m; sourceTree = "<group>"; };
+		04EE61A421980DC00048E442 /* MultiImageUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiImageUploadViewController.h; sourceTree = "<group>"; };
+		04EE61A521980DC00048E442 /* MultiImageUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiImageUploadViewController.m; sourceTree = "<group>"; };
 		04F13E1B20BE7FEB0016AD48 /* NSObject+Sark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sark.h"; sourceTree = "<group>"; };
 		04F13E1C20BE7FEB0016AD48 /* NSObject+Sark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sark.m"; sourceTree = "<group>"; };
 		04F13E1E20BE80290016AD48 /* RunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeViewController.h; sourceTree = "<group>"; };
@@ -308,6 +314,7 @@
 		042E81C6200D933700AB47AB /* Method_Nature_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				04EE61A321980D960048E442 /* MultiImageUpload */,
 				AA29CFCA21192794005BAB76 /* BinaryTree */,
 				AA83922321184AEF00C1C65B /* LinkNode */,
 				AAD35F4F20E9BBEB00755AC1 /* ImageViewTest */,
@@ -658,6 +665,17 @@
 			path = "事件传递";
 			sourceTree = "<group>";
 		};
+		04EE61A321980D960048E442 /* MultiImageUpload */ = {
+			isa = PBXGroup;
+			children = (
+				04EE61A421980DC00048E442 /* MultiImageUploadViewController.h */,
+				04EE61A521980DC00048E442 /* MultiImageUploadViewController.m */,
+				04E6899C2199B98700CA15E8 /* MLURLSessionWrapperOperation.h */,
+				04E6899D2199B98700CA15E8 /* MLURLSessionWrapperOperation.m */,
+			);
+			path = MultiImageUpload;
+			sourceTree = "<group>";
+		};
 		04F72A472092C46D00BF9395 /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,6 +899,7 @@
 				04A6D359206CF222005A531B /* EXLNeededTabeleView.m in Sources */,
 				040C9410209C747D00A40C22 /* UIImage+CutImage.m in Sources */,
 				0447BD6620B4526B00C59C9E /* Dog.m in Sources */,
+				04E6899E2199B98700CA15E8 /* MLURLSessionWrapperOperation.m in Sources */,
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
 				04F13E1D20BE7FEB0016AD48 /* NSObject+Sark.m in Sources */,
 				04A4E68420196C63000F6370 /* AssetModel.m in Sources */,
@@ -915,6 +934,7 @@
 				04C55B242064ED9900571715 /* Bird.m in Sources */,
 				04A4E67B20186D78000F6370 /* AssetViewController.m in Sources */,
 				0491827820C5178A0080788D /* AlgorithmViewController.m in Sources */,
+				04EE61A621980DC00048E442 /* MultiImageUploadViewController.m in Sources */,
 				04109B6520B2DA79007C37CF /* NeedTabelViewViewController.m in Sources */,
 				AAD35F5220E9BC0300755AC1 /* ImageViewTestViewController.m in Sources */,
 				04C00D742078E1EE000EA706 /* BlockAndPointerViewController.m in Sources */,
@@ -1081,7 +1101,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/Method_Nature_Demo/Method_Nature_Demo/Config/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/jack/Desktop/Method_Nature_Demo/Method_Nature_Demo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = Method_Nature_Demo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1113,7 +1133,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/MrWang/Desktop/Method_Nature_Demo/Method_Nature_Demo/Config/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/jack/Desktop/Method_Nature_Demo/Method_Nature_Demo/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = Method_Nature_Demo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
