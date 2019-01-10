@@ -1101,7 +1101,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/jack/Desktop/Method_Nature_Demo/Method_Nature_Demo/Config/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Method_Nature_Demo/config/PrefixHeader.pch;
 				INFOPLIST_FILE = Method_Nature_Demo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1133,7 +1133,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3593JT4FD7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = /Users/jack/Desktop/Method_Nature_Demo/Method_Nature_Demo/Config/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Method_Nature_Demo/config/PrefixHeader.pch;
 				INFOPLIST_FILE = Method_Nature_Demo/config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

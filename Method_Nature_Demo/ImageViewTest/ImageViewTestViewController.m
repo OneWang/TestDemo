@@ -61,6 +61,18 @@
 //        testImage.image = image;
         self.testImageView.image = image;
     }];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    [self.view addSubview:imageView];
+    imageView.backgroundColor = [UIColor redColor];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(64);
+        make.left.equalTo(self.view).offset(10);
+        make.width.height.equalTo(@300);
+    }];
+    UIImage *test = [UIImage imageNamed:@"屏幕快照 2018-01-18 下午6.04.02"];
+    imageView.image = [test resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 0) resizingMode:UIImageResizingModeStretch];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 // 图片裁剪
