@@ -80,6 +80,10 @@
 		04F325422052DBD000BB884B /* UIViewController+viewdidload.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F325412052DBCF00BB884B /* UIViewController+viewdidload.m */; };
 		04F72A4A2092C47E00BF9395 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72A492092C47E00BF9395 /* RunloopViewController.m */; };
 		9C2FEFE1D9329A4FFC537828 /* libPods-Method_Nature_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1373685654E61F295E95AA /* libPods-Method_Nature_Demo.a */; };
+		AA0F8F7822A8EAFE0068FD41 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0F8F7722A8EAFE0068FD41 /* Student.m */; };
+		AA0F8F7B22A8EB500068FD41 /* AspectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0F8F7A22A8EB500068FD41 /* AspectProxy.m */; };
+		AA0F8F7F22A8EBF50068FD41 /* AuditingInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0F8F7E22A8EBF50068FD41 /* AuditingInvoker.m */; };
+		AA0F8F8222A8EEFC0068FD41 /* ForwardInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0F8F8122A8EEFC0068FD41 /* ForwardInvocationViewController.m */; };
 		AA227A2E211302DF00C5D951 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA227A2D211302DF00C5D951 /* PreviewView.m */; };
 		AA29CFCD211927DC005BAB76 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AA29CFCC211927DC005BAB76 /* BinaryTreeNode.m */; };
 		AA3596C6212BF58C00F096D1 /* LeetCode.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA3596C5212BF58C00F096D1 /* LeetCode.mm */; };
@@ -249,6 +253,15 @@
 		11E8BBCF2939482AEE1E8519 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3EDD86AB42AA5298E35DDB4D /* Pods-Method_Nature_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Method_Nature_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Method_Nature_Demo/Pods-Method_Nature_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		75AC9A9F141723CCAE10F14A /* libPods-TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0F8F7622A8EAFE0068FD41 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		AA0F8F7722A8EAFE0068FD41 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		AA0F8F7922A8EB500068FD41 /* AspectProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AspectProxy.h; sourceTree = "<group>"; };
+		AA0F8F7A22A8EB500068FD41 /* AspectProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectProxy.m; sourceTree = "<group>"; };
+		AA0F8F7C22A8EB7E0068FD41 /* Invoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Invoker.h; sourceTree = "<group>"; };
+		AA0F8F7D22A8EBF50068FD41 /* AuditingInvoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuditingInvoker.h; sourceTree = "<group>"; };
+		AA0F8F7E22A8EBF50068FD41 /* AuditingInvoker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuditingInvoker.m; sourceTree = "<group>"; };
+		AA0F8F8022A8EEFC0068FD41 /* ForwardInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForwardInvocationViewController.h; sourceTree = "<group>"; };
+		AA0F8F8122A8EEFC0068FD41 /* ForwardInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardInvocationViewController.m; sourceTree = "<group>"; };
 		AA227A2C211302DF00C5D951 /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
 		AA227A2D211302DF00C5D951 /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
 		AA29CFCB211927DC005BAB76 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
@@ -314,6 +327,7 @@
 		042E81C6200D933700AB47AB /* Method_Nature_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AA0F8F7522A8EADA0068FD41 /* ForwardInvocation */,
 				04EE61A321980D960048E442 /* MultiImageUpload */,
 				AA29CFCA21192794005BAB76 /* BinaryTree */,
 				AA83922321184AEF00C1C65B /* LinkNode */,
@@ -696,6 +710,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AA0F8F7522A8EADA0068FD41 /* ForwardInvocation */ = {
+			isa = PBXGroup;
+			children = (
+				AA0F8F7622A8EAFE0068FD41 /* Student.h */,
+				AA0F8F7722A8EAFE0068FD41 /* Student.m */,
+				AA0F8F7922A8EB500068FD41 /* AspectProxy.h */,
+				AA0F8F7A22A8EB500068FD41 /* AspectProxy.m */,
+				AA0F8F7C22A8EB7E0068FD41 /* Invoker.h */,
+				AA0F8F7D22A8EBF50068FD41 /* AuditingInvoker.h */,
+				AA0F8F7E22A8EBF50068FD41 /* AuditingInvoker.m */,
+				AA0F8F8022A8EEFC0068FD41 /* ForwardInvocationViewController.h */,
+				AA0F8F8122A8EEFC0068FD41 /* ForwardInvocationViewController.m */,
+			);
+			path = ForwardInvocation;
+			sourceTree = "<group>";
+		};
 		AA29CFCA21192794005BAB76 /* BinaryTree */ = {
 			isa = PBXGroup;
 			children = (
@@ -882,6 +912,7 @@
 			files = (
 				04C00D772078E1FF000EA706 /* MultiThreadsViewController.m in Sources */,
 				043FA85D20A98296004274B5 /* ImageCell.m in Sources */,
+				AA0F8F7822A8EAFE0068FD41 /* Student.m in Sources */,
 				04A6D35D206CF85C005A531B /* UIView+Addition.m in Sources */,
 				0431511E20AEAC360061474E /* MultiImageDownloadCacheViewController.m in Sources */,
 				04C55B272064EDB700571715 /* Monkey.m in Sources */,
@@ -901,6 +932,8 @@
 				0447BD6620B4526B00C59C9E /* Dog.m in Sources */,
 				04E6899E2199B98700CA15E8 /* MLURLSessionWrapperOperation.m in Sources */,
 				042C1766201EC7EB006D1539 /* ItemCell.m in Sources */,
+				AA0F8F8222A8EEFC0068FD41 /* ForwardInvocationViewController.m in Sources */,
+				AA0F8F7B22A8EB500068FD41 /* AspectProxy.m in Sources */,
 				04F13E1D20BE7FEB0016AD48 /* NSObject+Sark.m in Sources */,
 				04A4E68420196C63000F6370 /* AssetModel.m in Sources */,
 				04A52FD320DBAA5D00D4FAA3 /* CollectionViewController.m in Sources */,
@@ -942,6 +975,7 @@
 				04C9FCC82078FACD00EE8DB6 /* MainModel.m in Sources */,
 				0455882E2079CD200052D9B8 /* Stuff.m in Sources */,
 				0431511B20AEAAB10061474E /* DownloadImage.m in Sources */,
+				AA0F8F7F22A8EBF50068FD41 /* AuditingInvoker.m in Sources */,
 				042E81C9200D933700AB47AB /* AppDelegate.m in Sources */,
 				AA227A2E211302DF00C5D951 /* PreviewView.m in Sources */,
 				045158892011D2F7001E37C8 /* UIView+ClipView.m in Sources */,

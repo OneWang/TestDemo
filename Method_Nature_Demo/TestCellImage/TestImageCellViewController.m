@@ -43,13 +43,12 @@
 }
 
 #pragma mark ***************************** UITableViewDelegate,UITableViewDataSource *****************************
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    NSLog(@"%s",__func__);
-    return 2;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    NSLog(@"%s",__func__);
+//    return 1;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"%s",__func__);
     return self.images.count;
 }
 
@@ -60,18 +59,18 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%s---%zd",__func__,indexPath.row);
-    return 120;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    NSLog(@"%s---%zd",__func__,indexPath.row);
+//    return 120;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     return 20.f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     return 20.f;
 }
 
@@ -85,7 +84,7 @@
 - (NSMutableArray *)images{
     if (!_images) {
         _images = [NSMutableArray array];
-        for (int i = 1; i < 20; i++) {
+        for (int i = 1; i <= 20; i++) {
             [self.images addObject:[NSString stringWithFormat:@"%d",i]];
         }
     }

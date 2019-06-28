@@ -10,4 +10,7 @@
 
 @interface Father : NSObject
 
+/** <#des#> */
+@property (nonatomic, copy) NSString *name;
+
 @end

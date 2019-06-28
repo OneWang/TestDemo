@@ -7,6 +7,7 @@
 //
 
 #import "ARCAndMRCViewController.h"
+#import <Masonry.h>
 
 @interface ARCAndMRCViewController ()
 
@@ -18,7 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:@[@"普模式",@"主持人"]];
+    [self.view addSubview:segment];
+    segment.tintColor = [UIColor clearColor];
+    segment.momentary = YES;
+    [segment addTarget:self action:@selector(p_segmentClick:) forControlEvents:UIControlEventValueChanged];
+    segment.backgroundColor = [UIColor clearColor];
+    segment.apportionsSegmentWidthsByContent = YES;
+    [segment setBackgroundImage:[UIImage imageNamed:@"JYLC_Living_Style_Left"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    segment.frame = CGRectMake(0, 100, 177, 36);
+    //    [segment setSegmentStyle:[UIColor clearColor] selectedColor:[UIColor clearColor] dividerColor:selectColor];
+//    [segment mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.view);
+//        make.centerY.equalTo(self.view);
+//        make.width.equalTo(@180);
+//        make.height.equalTo(@36);
+//    }];
+
     
     //C字符长度临界值为4的时候引用计数器为-1，当大于4的时候引用计数器为1
     NSString *test = [NSString stringWithFormat:@"%s,%d","aaaaa",12];
@@ -102,6 +121,14 @@
         NSLog(@"as");
     }else{
         NSLog(@"sdf");
+    }
+}
+
+- (void)p_segmentClick:(UISegmentedControl *)segment{
+    if (segment.selectedSegmentIndex == 0) {
+        [segment setBackgroundImage:[UIImage imageNamed:@"JYLC_Living_Style_Left"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    }else{
+        [segment setBackgroundImage:[UIImage imageNamed:@"JYLC_Living_Style_Right"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }
 }
 

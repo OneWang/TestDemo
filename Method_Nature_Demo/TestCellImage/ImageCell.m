@@ -48,6 +48,7 @@
     ImageCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
     if (cell == nil) {
         cell = [[ImageCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifer];
+        NSLog(@"创建 cell:%@",cell);
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

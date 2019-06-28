@@ -30,6 +30,7 @@
 #import "BlockAndPointerViewController.h"
 #import "ImageViewTestViewController.h"
 #import "MultiImageUploadViewController.h"
+#import "ForwardInvocationViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -48,6 +49,46 @@
     
     [self initData];
     [self createChildViews];
+//    [self p_test];
+}
+
+- (void)p_test{
+    dispatch_queue_t queue1 = dispatch_queue_create("queue1", 0);
+    dispatch_queue_t queue2 = dispatch_queue_create("queue2", 0);
+    
+    NSMutableArray *array = [NSMutableArray array];
+    
+    dispatch_async(queue1, ^{
+        while (true) {
+            if (array.count < 10) {
+                [array addObject:@(array.count)];
+            } else {
+                [array removeAllObjects];
+            }
+        }
+    });
+    
+    dispatch_async(queue2, ^{
+        while (true) {
+            // case 1
+//            for (NSNumber *number in array) {
+//                NSLog(@"%@", number);
+//            }
+            
+            // case 2
+//            NSArray *immutableArray = array;
+//            for (NSNumber *number in immutableArray) {
+//                NSLog(@"%@", number);
+//            }
+            
+            // case 3
+            NSArray *immutableArray = [array copy];
+            for (NSNumber *number in immutableArray) {
+                NSLog(@"%@", number);
+            }
+        }
+    });
+
 }
 
 - (void)initData{
@@ -113,6 +154,9 @@
     
     MainModel *model21 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([MultiImageUploadViewController class]),@"destationVC":[MultiImageUploadViewController class]}];
     [self.dataArray addObject:model21];
+    
+    MainModel *model22 = [MainModel yy_modelWithJSON:@{@"name":NSStringFromClass([ForwardInvocationViewController class]),@"destationVC":[ForwardInvocationViewController class]}];
+    [self.dataArray addObject:model22];
 }
 
 - (void)createChildViews{

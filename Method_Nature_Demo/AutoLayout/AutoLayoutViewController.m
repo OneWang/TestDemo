@@ -18,7 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *string = @"";
+    NSLog(@"%@",string ?: @"测试");
+    
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIScrollView *contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, UIScreen.mainScreen.bounds.size.width, 100)];
+    contentView.backgroundColor = [UIColor redColor];
+    contentView.contentSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width, 100);
+    [self.view addSubview:contentView];
+    UITextField *userName = [[UITextField alloc] init];
+    [contentView addSubview:userName];
+    userName.placeholder = @"测试";
+    userName.borderStyle = UITextBorderStyleBezel;
+    userName.clearButtonMode = UITextFieldViewModeWhileEditing;
+    [userName mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(contentView.mas_left).offset(38);
+//        make.right.equalTo(contentView.mas_right).offset(-38);
+        make.width.equalTo(@(UIScreen.mainScreen.bounds.size.width - 38 * 2));
+        make.centerX.equalTo(contentView);
+        make.top.equalTo(contentView);
+        make.height.equalTo(@44);
+    }];
     
 //    UILabel *label1 = [[UILabel alloc] init];
 //    [self.view addSubview:label1];
