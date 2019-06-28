@@ -1,6 +1,5 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
-#source 'git@gitlab.jiayuan-inc.com:jack/BHPrivatePod.git'
 
 target 'Method_Nature_Demo' do
     
@@ -10,6 +9,5 @@ pod 'YYModel'
 pod 'SDWebImage'
 pod 'YYCache'
 pod 'AFNetworking'
-#pod 'BHPrivatePod', :git => 'git@gitlab.jiayuan-inc.com:jack/BHPrivatePod.git'
 
 end

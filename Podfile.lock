@@ -14,13 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - BHPrivatePod (0.1.3):
-    - BHPrivatePod/Private (= 0.1.3)
-  - BHPrivatePod/Private (0.1.3):
-    - BHPrivatePod/Private/Model (= 0.1.3)
-    - BHPrivatePod/Private/View (= 0.1.3)
-  - BHPrivatePod/Private/Model (0.1.3)
-  - BHPrivatePod/Private/View (0.1.3)
   - Masonry (1.1.0)
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
@@ -30,7 +23,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - "BHPrivatePod (from `git@gitlab.jiayuan-inc.com:jack/BHPrivatePod.git`)"
   - Masonry
   - SDWebImage
   - YYCache
@@ -44,23 +36,13 @@ SPEC REPOS:
     - YYCache
     - YYModel
 
-EXTERNAL SOURCES:
-  BHPrivatePod:
-    :git: "git@gitlab.jiayuan-inc.com:jack/BHPrivatePod.git"
-
-CHECKOUT OPTIONS:
-  BHPrivatePod:
-    :commit: 2a9a01333c48a62ffaaf19cb0f2db948f4ee578e
-    :git: "git@gitlab.jiayuan-inc.com:jack/BHPrivatePod.git"
-
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  BHPrivatePod: fb6a0a00572d122c83aac862b4b7bad4c0184b24
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 4a99f47ad929443dad1cf76508b2025b94abd523
+PODFILE CHECKSUM: 350845f0f0402929ec1e0c2b088f50dd85424999
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
